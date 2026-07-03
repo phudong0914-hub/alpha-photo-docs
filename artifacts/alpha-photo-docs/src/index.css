@@ -1356,77 +1356,87 @@ body::after {
 }
 
 /* Cyan brand mark with a warm photographic halo */
+/* Premium Optical Brand Mark (Artistic Lens & Golden Hour Eclipse) */
 .halo-logo {
   position: relative;
   isolation: isolate;
   display: inline-grid;
-  width: 42px;
-  height: 42px;
-  flex: 0 0 42px;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
   place-items: center;
-  margin-inline: 3px;
-  transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1);
+  margin-inline: 4px;
+  transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 .halo-logo-compact {
-  width: 38px;
-  height: 38px;
-  flex-basis: 38px;
+  width: 36px;
+  height: 36px;
+  flex-basis: 36px;
 }
 .halo-logo-aura,
 .halo-logo-ring {
   position: absolute;
   pointer-events: none;
   border-radius: 50%;
+  transition: all 400ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 .halo-logo-aura {
   z-index: -2;
-  inset: -12px;
-  opacity: 0.75;
+  inset: -6px;
+  opacity: 0.45;
   background: radial-gradient(
     circle,
-    rgba(255, 223, 42, 0.58) 0%,
-    rgba(230, 186, 0, 0.28) 35%,
-    rgba(150, 108, 0, 0.09) 57%,
-    transparent 72%
+    rgba(255, 170, 40, 0.35) 0%,
+    rgba(220, 110, 0, 0.12) 45%,
+    transparent 70%
   );
-  filter: blur(5px);
-  animation: halo-breathe 3.6s ease-in-out infinite;
+  filter: blur(4px);
+  animation: halo-breathe 4s ease-in-out infinite;
 }
 .halo-logo-ring {
   z-index: -1;
-  inset: 1px;
-  border: 1px solid rgba(255, 224, 74, 0.42);
-  background: rgba(28, 25, 2, 0.62);
+  inset: 0px;
+  border: 1px solid rgba(255, 195, 75, 0.25);
+  background: radial-gradient(circle at 35% 35%, rgba(20, 18, 15, 0.85) 0%, rgba(8, 7, 6, 0.95) 100%);
   box-shadow:
-    0 0 8px rgba(255, 218, 30, 0.6),
-    0 0 22px rgba(255, 200, 0, 0.4),
-    inset 0 0 10px rgba(255, 215, 35, 0.13);
+    0 0 12px rgba(255, 160, 20, 0.15),
+    inset 0 1px 2px rgba(255, 220, 150, 0.08);
 }
 .halo-logo-core {
   display: grid;
-  width: 27px;
-  height: 27px;
+  width: 26px;
+  height: 26px;
   place-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(255, 200, 100, 0.4);
   border-radius: 50%;
-  background: linear-gradient(145deg, #20f2e5 0%, #00d7e4 100%);
+  /* Obsidian glass base with amber highlight reflection */
+  background: linear-gradient(135deg, #151311 0%, #0d0c0b 100%);
+  position: relative;
+  overflow: hidden;
   box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.65) inset,
-    0 -4px 10px rgba(0, 116, 139, 0.2) inset,
-    0 0 10px rgba(23, 239, 229, 0.75);
-  color: #fff;
+    0 4px 10px rgba(0, 0, 0, 0.5),
+    inset 0 1px 3px rgba(255, 200, 120, 0.15);
+  color: #ffd993; /* Warm Champagne Gold */
   font-family: 'Lora', serif;
-  font-size: 18px;
+  font-size: 16px;
   font-style: italic;
-  font-weight: 750;
+  font-weight: 700;
   line-height: 1;
-  text-shadow: 0 1px 2px rgba(0, 77, 88, 0.3);
+  text-shadow: 0 0 4px rgba(255, 180, 50, 0.3);
+  transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+/* Lens flare reflection effect */
+.halo-logo-core::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.03) 40%, transparent 60%);
+  pointer-events: none;
 }
 .halo-logo-compact .halo-logo-core {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  font-size: 16px;
+  width: 24px;
+  height: 24px;
+  font-size: 15px;
 }
 .group:hover .halo-logo,
 .halo-logo:hover {

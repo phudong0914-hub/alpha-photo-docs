@@ -1382,24 +1382,25 @@ body::after {
 }
 .halo-logo-aura {
   z-index: -2;
-  inset: -6px;
-  opacity: 0.6;
+  inset: -12px;
+  opacity: 0.85;
   background: radial-gradient(
     circle,
-    rgba(80, 228, 237, 0.4) 0%,
-    rgba(0, 215, 228, 0.15) 45%,
-    transparent 70%
+    rgba(255, 215, 0, 0.6) 0%,
+    rgba(255, 140, 0, 0.3) 40%,
+    rgba(230, 180, 0, 0.1) 60%,
+    transparent 75%
   );
-  filter: blur(4px);
-  animation: halo-breathe 4s ease-in-out infinite;
+  filter: blur(5px);
+  animation: halo-breathe 3.6s ease-in-out infinite;
 }
 .halo-logo-ring {
   z-index: -1;
   inset: 0px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 224, 74, 0.45);
   background: rgba(15, 23, 30, 0.6);
   box-shadow:
-    0 0 10px rgba(80, 228, 237, 0.15),
+    0 0 10px rgba(255, 200, 0, 0.45),
     inset 0 1px 1px rgba(255, 255, 255, 0.05);
 }
 .halo-logo-core {
@@ -1407,7 +1408,7 @@ body::after {
   width: 28px;
   height: 28px;
   place-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   /* Original brand cyan background gradient */
   background: linear-gradient(135deg, #50e4ed 0%, #00c2cf 100%);

@@ -791,7 +791,7 @@ export default function TieuDiemPage() {
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-2">
               <div className="w-5 h-5 rounded bg-gradient-to-br from-[#7c8aff] to-[#5a6aff] flex items-center justify-center text-white text-[8px] font-bold">α</div>
-              <span className="text-xs text-[#6b6b80]">Alpha Photography Docs</span>
+              <span className="text-xs text-[#6b6b80]">Alpha Photography</span>
             </div>
             <span className="text-xs text-[#6b6b80]">v2.0 · 2026</span>
           </div>

@@ -699,10 +699,10 @@ export default function DocsLayout({ children, tocSections }: DocsLayoutProps) {
           <Link href="/khoa-hoc" className="flex items-center gap-2.5 group">
             <HaloLogo />
             <div className="flex flex-col justify-center">
-              <span className="font-semibold text-[#e8e8f0] text-sm tracking-tight hidden sm:inline group-hover:text-[#7c8aff] transition-colors duration-300">
+              <span className="font-semibold text-[#e8e8f0] text-sm tracking-tight hidden sm:inline group-hover:text-[#50e4ed] transition-colors duration-300">
                 Alpha Photography
               </span>
-              <span className="text-[9px] text-[#8e8eaf] font-serif italic tracking-wide hidden sm:inline mt-0.5 leading-none pl-0.5 opacity-90">
+              <span className="text-[11px] text-[#ffcb6b] font-serif italic tracking-widest hidden sm:inline mt-1 leading-none pl-0.5 font-medium drop-shadow-[0_0_8px_rgba(255,203,107,0.3)] group-hover:text-white transition-colors duration-300">
                 Trungvt
               </span>
             </div>

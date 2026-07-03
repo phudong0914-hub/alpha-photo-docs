@@ -1408,7 +1408,7 @@ body::after {
   height: 27px;
   place-items: center;
   border: 1px solid rgba(255, 255, 255, 0.62);
-  border-radius: 8px;
+  border-radius: 50%;
   background: linear-gradient(145deg, #20f2e5 0%, #00d7e4 100%);
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.65) inset,
@@ -1425,7 +1425,7 @@ body::after {
 .halo-logo-compact .halo-logo-core {
   width: 25px;
   height: 25px;
-  border-radius: 7px;
+  border-radius: 50%;
   font-size: 16px;
 }
 .group:hover .halo-logo,

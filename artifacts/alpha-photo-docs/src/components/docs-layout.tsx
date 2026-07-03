@@ -698,11 +698,11 @@ export default function DocsLayout({ children, tocSections }: DocsLayoutProps) {
           </motion.button>
           <Link href="/khoa-hoc" className="flex items-center gap-2.5 group">
             <HaloLogo />
-            <div className="flex flex-col">
+            <div className="flex flex-col justify-center">
               <span className="font-semibold text-[#e8e8f0] text-sm tracking-tight hidden sm:inline group-hover:text-[#7c8aff] transition-colors duration-300">
                 Alpha Photography
               </span>
-              <span className="text-[10px] text-[#7a7a9a] font-mono tracking-widest hidden sm:inline -mt-0.5 leading-none">
+              <span className="text-[9px] text-[#8e8eaf] font-serif italic tracking-wide hidden sm:inline mt-0.5 leading-none pl-0.5 opacity-90">
                 Trungvt
               </span>
             </div>

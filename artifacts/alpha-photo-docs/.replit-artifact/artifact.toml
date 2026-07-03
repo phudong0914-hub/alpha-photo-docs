@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Alpha Photography Docs"
+version = "1.0.0"
+id = "artifacts/alpha-photo-docs"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18663
+
+[services.development]
+run = "pnpm --filter @workspace/alpha-photo-docs run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/alpha-photo-docs", "run", "build" ]
+publicDir = "artifacts/alpha-photo-docs/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18663"
+BASE_PATH = "/"

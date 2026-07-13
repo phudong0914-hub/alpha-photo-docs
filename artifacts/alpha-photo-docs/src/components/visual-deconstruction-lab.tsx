@@ -285,14 +285,14 @@ export function VisualDeconstructionLab({
         </div>
         
         {/* Preset switch tabs */}
-        <div className="flex gap-1.5 bg-black/45 p-1 rounded-lg border border-white/5 w-full sm:w-auto">
+        <div className="flex gap-1 bg-black/45 p-1 rounded-lg border border-white/5 w-full sm:w-auto overflow-x-auto">
           {Object.values(presets).map((p) => (
             <button
               key={p.id}
               onClick={() => setPresetId(p.id)}
-              className={`flex-1 sm:flex-none px-3.5 py-1.5 rounded-md text-[11px] font-semibold transition-all cursor-pointer ${presetId === p.id ? 'bg-[#c9a84c] text-black font-bold shadow-md' : 'text-[#9d9db5] hover:text-white'}`}
+              className={`flex-grow sm:flex-none px-3 py-1.5 rounded-md text-[10px] font-semibold transition-all cursor-pointer whitespace-nowrap ${presetId === p.id ? 'bg-[#c9a84c] text-black font-bold shadow-md' : 'text-[#9d9db5] hover:text-white'}`}
             >
-              {p.title}
+              {p.id === 'portrait' ? 'Mẫu Chân dung' : p.id === 'dunes' ? 'Mẫu Phong cảnh' : 'Ảnh của bạn'}
             </button>
           ))}
         </div>
@@ -310,7 +310,7 @@ export function VisualDeconstructionLab({
             onMouseMove={handleMouseMove}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            className="relative w-full aspect-video rounded-xl bg-[#030305] border border-white/[0.06] overflow-hidden flex items-center justify-center cursor-grab active:cursor-grabbing group"
+            className="relative w-full aspect-video rounded-xl bg-[#030305] border border-white/[0.06] overflow-hidden flex items-center justify-center cursor-grab active:cursor-grabbing group animate-fade-in"
             style={{
               perspective: '1000px',
             }}
@@ -332,8 +332,8 @@ export function VisualDeconstructionLab({
             {/* 3D Transform Wrapper Container */}
             <motion.div
               style={{
-                width: '85%',
-                height: '85%',
+                width: '70%',
+                height: '70%',
                 transformStyle: 'preserve-3d',
                 rotateX: rotateX,
                 rotateY: rotateY,

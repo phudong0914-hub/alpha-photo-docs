@@ -1,6 +1,8 @@
 
 
 import { useState, useEffect } from 'react';
+import { LessonVideoPlayer } from '@/components/lesson-video-player';
+import { lessonVideos } from '@/lib/video-config';
 import { Link } from 'wouter';
 import {
   ChevronRight,
@@ -131,6 +133,9 @@ export default function GocChupPage() {
             loading="eager"
           />
         </div>
+
+        {/* Video bài học */}
+        <LessonVideoPlayer video={lessonVideos['/goc-chup']} />
 
         {/* Opening Quote */}
         <div className="quote-block">

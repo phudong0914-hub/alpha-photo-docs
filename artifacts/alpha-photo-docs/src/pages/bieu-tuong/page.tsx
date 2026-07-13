@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { LessonVideoPlayer } from '@/components/lesson-video-player';
+import { lessonVideos } from '@/lib/video-config';
 import { Link } from 'wouter';
 import { HugeiconsIcon } from '@hugeicons/react';
 import {
@@ -256,6 +258,11 @@ export default function BieuTuongPage() {
 
           </div>
         </header>
+
+        {/* Video bài học */}
+        <div className="max-w-7xl mx-auto px-6 pt-12">
+          <LessonVideoPlayer video={lessonVideos['/bieu-tuong']} />
+        </div>
 
         {/* SECTION I: PREMISE */}
         <section id="premise" className="max-w-7xl mx-auto px-6 py-20 border-b border-white/[0.06]">

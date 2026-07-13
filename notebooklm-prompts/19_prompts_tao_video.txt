@@ -1,0 +1,463 @@
+# 🎬 TỔNG HỢP 19 PROMPT TẠO VIDEO CHO NOTEBOOKLM
+
+> Dùng file này để copy nhanh các Prompt dán vào ô "Customize" khi tạo Audio Overview.
+
+==================================================
+
+### 🎯 PROMPT BÀI 1: SỨC MẠNH CỦA HÌNH ẢNH
+
+```
+Hãy tạo một audio overview dạng podcast học thuật bằng tiếng Việt cho bài học số 1 trong khóa học nhiếp ảnh chuyên nghiệp mang tên "Sức mạnh của hình ảnh".
+
+Phong cách: Học thuật nhưng dễ tiếp cận, như một buổi giảng của giáo sư đại học nghệ thuật kết hợp với podcast khoa học. Giọng điệu trầm tĩnh, thông tuệ, đôi khi có những câu hỏi mở kích thích tư duy.
+
+Cấu trúc video khoảng 8-12 phút:
+1. INTRO 60 giây: Câu hỏi mở "Hình ảnh là gì?" — tại sao câu hỏi này quan trọng hơn bạn nghĩ
+2. PHẦN I 2 phút: Bản chất của hình ảnh — từ imago đến sự phản trắc thực tại
+3. PHẦN II 3 phút: Khoa học thần kinh — 13ms, amygdala, Fast/Slow pathway, visual hotspots
+4. PHẦN III 3 phút: Ứng dụng thực tế — 3 tầng kể chuyện, hiệu ứng Kuleshov, nghệ thuật chắt lọc
+5. PHẦN IV 2 phút: Triết học — Semiotics, Studium và Punctum của Roland Barthes
+6. OUTRO 1 phút: Kết luận và kết nối với bài học tiếp theo về Mục đích nhiếp ảnh
+
+Nhấn mạnh: Sử dụng ví dụ cụ thể như ảnh Napalm Girl và Kuleshov Effect. Giải thích thuật ngữ tiếng Anh bằng tiếng Việt. Kết thúc mỗi phần bằng một câu tóm tắt đáng nhớ.
+
+---
+```
+
+--------------------------------------------------
+
+### 🎯 PROMPT BÀI 2: MỤC ĐÍCH NHIẾP ẢNH
+
+```
+Hãy tạo một audio overview bằng tiếng Việt cho bài học số 2: "Mục đích nhiếp ảnh" trong khóa học Ngôn ngữ thị giác của Alpha Photography.
+
+Phong cách: Như một buổi workshop với nhiếp ảnh gia chuyên nghiệp — thực tế, có ví dụ cụ thể, đôi khi đặt câu hỏi trực tiếp cho người nghe.
+
+Cấu trúc 8-10 phút:
+1. HOOK 45 giây: Câu hỏi "Hình ảnh này tồn tại để làm gì?" — tại sao đây là câu hỏi đầu tiên cần hỏi
+2. 4 MỤC ĐÍCH 4 phút: Documentary, Communicative, Evocative, Experimental — mỗi mục đích có ví dụ nhiếp ảnh gia cụ thể
+3. FRAMEWORK Q1-Q4 2 phút: Công cụ thực hành xác định mục đích trước khi chụp
+4. SINGLE vs SERIES 1.5 phút: Khi nào dùng ảnh đơn, khi nào dùng series
+5. ĐẠO ĐỨC 1 phút: Mục đích ảnh hưởng đến đạo đức như thế nào
+6. OUTRO: Kết nối với bài 3 — Ngôn ngữ biểu tượng
+
+Giọng điệu: Trực tiếp, thực tế. Sử dụng tên nhiếp ảnh gia nổi tiếng làm ví dụ (Ansel Adams, HCB, Dorothea Lange, Daido Moriyama).
+
+---
+```
+
+--------------------------------------------------
+
+### 🎯 PROMPT BÀI 3: NGÔN NGỮ BIỂU TƯỢNG
+
+```
+Tạo audio overview tiếng Việt cho bài 3: "Ngôn ngữ biểu tượng" — khóa học Ngôn ngữ thị giác Alpha Photography.
+
+Nội dung cần trình bày:
+
+PHẦN 1 — Biểu tượng là gì: Ba cấp độ biểu tượng (văn hóa, cá nhân, phổ quát). Ba loại ký hiệu của Peirce: Icon (tương đồng — ảnh nhà đại diện cho nhà), Index (chỉ thị — khói chỉ ra lửa), Symbol (quy ước xã hội — màu trắng = thuần khiết Tây / tang tóc Đông).
+
+PHẦN 2 — Các biểu tượng phổ biến: Ánh sáng (từ trên = thần thánh, ngược = hào quang, từ dưới = đáng sợ, hoàng hôn = ký ức, bình minh = hy vọng). Màu sắc xuyên văn hóa (đỏ, xanh, vàng, đen, trắng). Hướng và vị trí (trái-phải, cao-thấp, trung tâm-rìa khung).
+
+PHẦN 3 — Kỹ thuật: Found Symbols (tìm biểu tượng tự nhiên), Constructed Symbols (dàn dựng có chủ đích), Juxtaposition (đặt đối lập cạnh nhau), Visual Metaphor (dùng vật thể này nói về vật thể khác).
+
+PHẦN 4 — Studium và Punctum của Roland Barthes. Mâu thuẫn của biểu tượng: quá rõ = cliché, quá tinh = bị bỏ lỡ.
+
+Phong cách: Như nhà nhân chủng học thị giác — thú vị, đầy ắp ví dụ cụ thể. Thời lượng: 9-11 phút.
+
+---
+```
+
+--------------------------------------------------
+
+### 🎯 PROMPT BÀI 4: ĐƯỜNG NÉT (LINE)
+
+```
+Tạo audio overview tiếng Việt cho bài 4: "Đường nét (Line)" — khóa học Ngôn ngữ thị giác Alpha Photography.
+
+Nội dung cần trình bày:
+
+PHẦN 1 — Bản chất: Đường nét thực (đường ray, lan can, bóng đổ) và Đường nét ngụ ý (hướng nhìn, hướng di chuyển).
+
+PHẦN 2 — Sáu loại đường nét và cảm xúc: Nằm ngang (yên bình, ổn định), Thẳng đứng (sức mạnh, uy nghiêm), Chéo (năng động, căng thẳng), Cong/S-Curve (quyến rũ, tự nhiên), Gãy/Zigzag (hỗn loạn, nguy hiểm), Hội tụ (chiều sâu, vô tận).
+
+PHẦN 3 — Ứng dụng: Leading Lines dẫn mắt đến chủ thể, Frame within Frame dùng đường tạo khung, Vanishing Point hút mắt vào điểm hội tụ.
+
+PHẦN 4 — Elite: Đọc đường nét như nhạc sĩ đọc nốt nhạc. Phân tích "The Decisive Moment" của HCB và "Moonrise over Hernandez" của Ansel Adams.
+
+Bài tập: Trước khi nhìn màu sắc, hãy nhìn ảnh như thể chỉ có đường nét — vẽ lại cấu trúc đường nét của 5 bức ảnh yêu thích.
+
+Phong cách: Kỹ thuật nhưng cảm xúc — mô tả cảm giác của từng loại đường bằng ngôn ngữ thể chất ("cảm giác như đang leo dốc", "như đang nằm xuống trên bãi cỏ"). Thời lượng: 8-10 phút.
+
+---
+```
+
+--------------------------------------------------
+
+### 🎯 PROMPT BÀI 5: HÌNH DẠNG (SHAPE)
+
+```
+Tạo audio overview tiếng Việt cho bài 5: "Hình dạng (Shape)" — khóa học Ngôn ngữ thị giác Alpha Photography.
+
+Nội dung cần trình bày:
+
+PHẦN 1 — Ba hình dạng cơ bản: Tròn (hoàn hảo, liên tục, nữ tính, bảo vệ — Fan Ho dùng đèn đường tròn). Vuông/Chữ nhật (ổn định, trật tự, nam tính, lý trí — kiến trúc). Tam giác (năng động, quyền lực khi đỉnh lên, bất ổn khi đỉnh xuống).
+
+PHẦN 2 — Hình dạng trong bố cục: Bố cục tam giác, Positive và Negative shape, Lặp lại hình dạng tạo nhịp điệu, Silhouette như thử nghiệm hình dạng thuần túy.
+
+PHẦN 3 — Gestalt: Closure (não tự đóng hình dạng chưa hoàn chỉnh), Figure-Ground (hình và nền hoán đổi), Similarity (nhóm các yếu tố giống nhau), Proximity (nhóm các yếu tố gần nhau).
+
+PHẦN 4 — Logo và thiết kế: Tại sao Apple dùng hình tròn, tại sao tam giác = nguy hiểm, tại sao chữ nhật = tin cậy.
+
+Phong cách: Như nhà tâm lý học thị giác — khoa học nhưng đầy hình ảnh sống động. Dùng ngôn ngữ gợi hình mạnh: "Hình tròn như ôm — vuông như đứng thẳng — tam giác như mũi tên đang bay." Thời lượng: 8-9 phút.
+
+---
+```
+
+--------------------------------------------------
+
+### 🎯 PROMPT BÀI 6: KHÔNG GIAN (SPACE)
+
+```
+Tạo audio overview tiếng Việt cho bài 6: "Không gian (Space)" — khóa học Ngôn ngữ thị giác Alpha Photography.
+
+Nội dung cần trình bày:
+
+PHẦN 1 — Positive vs Negative Space: Định nghĩa. Chức năng của negative space: tạo không gian thở, định hướng di chuyển, nhấn mạnh cô đơn/tự do, tạo cân bằng, đôi khi trở thành chủ thể.
+
+PHẦN 2 — Không gian và cảm xúc: Open Space (tự do, cô đơn, nhỏ bé — Michael Kenna, Hiroshi Sugimoto). Compressed Space (căng thẳng, năng động đô thị — Daido Moriyama, Alex Webb). Khoảng cách giữa chủ thể (gần = thân mật, xa = cô đơn).
+
+PHẦN 3 — Quy tắc: Rule of Thirds (lý do hoạt động — gần tỷ lệ vàng phi). Golden Ratio và Fibonacci Spiral. Phá vỡ quy tắc có chủ đích — khi nào đặt giữa lại mạnh hơn.
+
+PHẦN 4 — Triết học Đông phương: Ma (間) trong nghệ thuật Nhật Bản — khoảng trống có ý nghĩa. Hiroshi Sugimoto Seascapes — không gian của im lặng và thời gian.
+
+Phong cách: Thiền định và sâu sắc — như thiền sư nhiếp ảnh nói về sức mạnh của im lặng. Mở bằng câu: "Khoảng trống trong âm nhạc không phải là sự vắng mặt của âm thanh — đó là âm thanh của im lặng." Thời lượng: 9-11 phút.
+
+---
+```
+
+--------------------------------------------------
+
+### 🎯 PROMPT BÀI 7: ÁNH SÁNG (LIGHT)
+
+```
+Tạo audio overview tiếng Việt cho bài 7: "Ánh sáng (Light)" — khóa học Ngôn ngữ thị giác Alpha Photography.
+
+Nội dung cần trình bày:
+
+PHẦN 1 — Chất lượng ánh sáng: Hard Light (nguồn sáng nhỏ/xa, bóng sắc nét, kịch tính, street photography). Soft Light (nguồn sáng lớn/khuếch tán, bóng mờ dần, dịu dàng, portrait).
+
+PHẦN 2 — Hướng ánh sáng: Front Light (phẳng, thiếu chiều sâu). 45 độ/Rembrandt Light (tam giác sáng dưới mắt, nghệ thuật cổ điển). Side Light (tối đa hóa texture). Back Light (rim light, hào quang, thiêng liêng). Under Light (bất thường, đáng sợ).
+
+PHẦN 3 — Nhiệt độ màu Kelvin: 2000K nến, 3200K tungsten, 5500K trưa, 7000K mây, 10000K bóng xanh. Golden Hour (3500-4000K, 1 giờ sau bình minh và trước hoàng hôn). Blue Hour (sau hoàng hôn 20-30 phút, đối lập ấm-lạnh).
+
+PHẦN 4 — Elite: Caravaggio và Chiaroscuro — một nguồn sáng tạo tương phản cực mạnh. Zone System của Ansel Adams — 11 vùng tông từ đen hoàn toàn đến trắng hoàn toàn. Đề cập ánh sáng nhiệt đới Việt Nam — Hội An, Sa Pa, Mũi Né.
+
+Phong cách: Như họa sĩ và nhà vật lý học kết hợp. Mở bằng: "Photo-graphy = Vẽ bằng ánh sáng. Nhưng đa số chúng ta chụp ảnh, không vẽ ảnh." Thời lượng: 10-12 phút.
+
+---
+```
+
+--------------------------------------------------
+
+### 🎯 PROMPT BÀI 8: MÀU SẮC (COLOR)
+
+```
+Tạo audio overview tiếng Việt cho bài 8: "Màu sắc (Color)" — khóa học Ngôn ngữ thị giác Alpha Photography.
+
+Nội dung cần trình bày:
+
+PHẦN 1 — Bánh xe màu sắc: Primary (Đỏ, Vàng, Lam). Secondary và Tertiary. Quan hệ màu: Complementary (Cam-Xanh lam tạo tương phản tối đa — cơ sở của Teal & Orange cinema), Analogous (cạnh nhau, hài hòa), Triadic (3 màu cách 120 độ, sôi động).
+
+PHẦN 2 — Tâm lý học màu sắc: Màu ấm (tiến về phía trước, kích động, năng lượng). Màu lạnh (lùi ra xa, tĩnh lặng, chiêm nghiệm). Trung tính (để màu khác "nói", tinh tế, luxury).
+
+PHẦN 3 — Color Story: Palette chủ đạo. Công thức 60-30-10 (Dominant-Supporting-Accent). Color Grading hậu kỳ — màu sắc phục vụ câu chuyện không nhất thiết phải là màu thực.
+
+PHẦN 4 — Màu sắc và văn hóa: Trắng (thuần khiết Tây vs tang tóc Đông), Đỏ (nguy hiểm Tây vs may mắn Việt/Hoa). Nhiếp ảnh gia màu sắc: Ernst Haas (tiên phong), Alex Webb (Caribbean), William Eggleston (bình thường Mỹ).
+
+Phong cách: Sôi động như nhà thiết kế thời trang. Mở bằng: "Tại sao McDonald's dùng màu đỏ và vàng? Tại sao phòng bệnh viện màu xanh lá? Màu sắc kiểm soát cảm xúc bạn mà bạn không nhận ra." Thời lượng: 9-11 phút.
+
+---
+```
+
+--------------------------------------------------
+
+### 🎯 PROMPT BÀI 9: TƯƠNG PHẢN (CONTRAST)
+
+```
+Tạo audio overview tiếng Việt cho bài 9: "Tương phản (Contrast)" — khóa học Ngôn ngữ thị giác Alpha Photography.
+
+Nội dung cần trình bày:
+
+PHẦN 1 — Sáu loại tương phản: Tông (sáng-tối), Màu sắc (bổ sung, ấm-lạnh), Kết cấu (nhẵn-thô), Hình dạng (tròn-vuông), Kích thước (người nhỏ-tòa nhà lớn), Khái niệm (già-trẻ, giàu-nghèo, tự nhiên-nhân tạo).
+
+PHẦN 2 — Tương phản và điểm nhấn: Mắt tự động đến vùng tương phản cao nhất. High Key (tông sáng, nhẹ nhàng, lạc quan, beauty) vs Low Key (tông tối, bí ẩn, sang trọng, noir). Nhịp thở của tương phản — vùng cao và vùng thấp.
+
+PHẦN 3 — Tương phản kể chuyện: Tương phản khái niệm là công cụ kể chuyện mạnh nhất không cần lời. Ví dụ: hoa trên bãi chiến trường = hy vọng trong tuyệt vọng. Nhiếp ảnh gia: HCB (hình học), Sebastião Salgado (xã hội và tông đen trắng), Steve McCurry (màu bổ sung).
+
+Phong cách: Mạnh mẽ và rõ ràng như chính tương phản. Mở bằng: "Nếu bạn in một tờ giấy trắng hoàn toàn — đó là hình ảnh không? Không. Hình ảnh chỉ tồn tại khi có sự khác biệt." Thời lượng: 8-10 phút.
+
+---
+```
+
+--------------------------------------------------
+
+### 🎯 PROMPT BÀI 10: CHẤT LIỆU (TEXTURE)
+
+```
+Tạo audio overview tiếng Việt cho bài 10: "Chất liệu (Texture)" — khóa học Ngôn ngữ thị giác Alpha Photography.
+
+Nội dung cần trình bày:
+
+PHẦN 1 — Texture là ký ức xúc giác được mã hóa thành thị giác. Khi nhìn ảnh vỏ cây, não không chỉ xử lý thông tin thị giác — nó kích hoạt ký ức xúc giác về cảm giác chạm vào vỏ cây.
+
+PHẦN 2 — Side Light là công cụ tối đa hóa texture. Ánh sáng từ góc thấp tạo bóng nhỏ trong mọi gợn, mọi lỗ hổng trên bề mặt. Macro photography và thế giới kết cấu cực cận — những gì mắt thường không thấy.
+
+PHẦN 3 — Texture tương phản: Nhẵn-Thô (da người trên bê tông), Mềm-Cứng (lụa trên đá), Ướt-Khô (mặt hồ phẳng cạnh đá sần), Cũ-Mới. Sự va chạm của texture tạo căng thẳng và kịch tính thị giác.
+
+PHẦN 4 — Nhiếp ảnh gia bậc thầy: Edward Weston — vỏ ớt như điêu khắc, bắp cải như kiến trúc. Karl Blossfeldt — thực vật như kiến trúc Gothic. Brett Weston và Michael Kenna với texture trong thiên nhiên.
+
+Bài tập: Chụp 5 texture trong 10m2 xung quanh bạn — mỗi texture phải truyền đạt một cảm xúc khác nhau.
+
+Phong cách: Xúc giác và gợi cảm — ngôn ngữ mô tả phải khiến người nghe "cảm" được bề mặt qua tai. Thời lượng: 8-9 phút.
+
+---
+```
+
+--------------------------------------------------
+
+### 🎯 PROMPT BÀI 11: TỶ LỆ & KÍCH THƯỚC
+
+```
+Tạo audio overview tiếng Việt cho bài 11: "Tỷ lệ và Kích thước" — khóa học Ngôn ngữ thị giác Alpha Photography.
+
+Nội dung cần trình bày:
+
+PHẦN 1 — Tỷ lệ vàng (Golden Ratio) — Phi = 1.618: Xuất hiện trong vỏ ốc nautilus, xoắn hoa hướng dương, tỷ lệ khuôn mặt đẹp. Não người nhận ra tỷ lệ này là "đẹp" một cách bản năng. Fibonacci Spiral là cách áp dụng thực tế trong bố cục nhiếp ảnh.
+
+PHẦN 2 — Scale và quyền lực: Người nhỏ bé trước cảnh vật hùng vĩ (Ansel Adams — con người và thiên nhiên vĩ đại). Góc thấp nhìn lên = chủ thể hùng mạnh. Góc cao nhìn xuống = chủ thể nhỏ bé, yếu đuối.
+
+PHẦN 3 — Macro vs Wide: Cùng một chủ thể nhưng kích thước thay đổi thì ý nghĩa thay đổi. Macro biến thứ bình thường thành kỳ diệu (giọt nước to bằng quả bóng). Wide angle biến thứ quan trọng thành nhỏ bé trong ngữ cảnh.
+
+PHẦN 4 — Sai lệch tỷ lệ có chủ đích: René Magritte với apple khổng lồ che mặt người đàn ông — siêu thực. Nhiếp ảnh gia thao túng tỷ lệ để tạo ra ảo giác và thông điệp mạnh.
+
+Phong cách: Triết học và thực hành — tại sao tỷ lệ ảnh hưởng đến cảm nhận quyền lực. Thời lượng: 8-9 phút.
+
+---
+```
+
+--------------------------------------------------
+
+### 🎯 PROMPT BÀI 12: BẦU KHÔNG KHÍ
+
+```
+Tạo audio overview tiếng Việt cho bài 12: "Bầu không khí" — khóa học Ngôn ngữ thị giác Alpha Photography.
+
+Nội dung cần trình bày:
+
+PHẦN 1 — Atmosphere là gì: Tổng hòa của tất cả yếu tố phi kỹ thuật — sương mù, độ ẩm, nhiệt độ màu, mật độ không khí, thời tiết. Atmosphere là thứ người xem "cảm nhận" trước khi "nhìn thấy".
+
+PHẦN 2 — Các loại atmosphere: Sương mù và mưa (làm mờ ranh giới, tạo chiều sâu ảo, bí ẩn, cô đơn). Nắng gắt nhiệt đới (khắc nghiệt, sự thật trần trụi, năng lượng). Tuyết và băng (tĩnh lặng, cô lập, thời gian đứng yên). Khói và bụi (ô nhiễm đô thị, chiến tranh, hỗn loạn).
+
+PHẦN 3 — Atmospheric Perspective: Càng xa càng mờ, màu sắc càng nhạt, tương phản càng thấp. Đây là cách não nhận biết khoảng cách. Nhiếp ảnh gia sử dụng sương mù và khói để tạo chiều sâu ảo trong ảnh 2 chiều.
+
+PHẦN 4 — Ánh sáng đặc trưng Việt Nam: Hội An với đèn lồng vàng và sương đêm. Sa Pa với mây mù và ruộng bậc thang. Mũi Né với cồn cát và nắng gắt. Nhiếp ảnh gia: Hiroshi Sugimoto (Seascapes không thời gian), Bill Brandt (sương mù London).
+
+Phong cách: Thơ và cảm xúc — mô tả atmosphere như mô tả một trạng thái cảm xúc, không phải điều kiện thời tiết. Thời lượng: 9-10 phút.
+
+---
+```
+
+--------------------------------------------------
+
+### 🎯 PROMPT BÀI 13: BỐ CỤC (COMPOSITION)
+
+```
+Tạo audio overview tiếng Việt cho bài 13: "Bố cục (Composition)" — khóa học Ngôn ngữ thị giác Alpha Photography.
+
+Nội dung cần trình bày:
+
+PHẦN 1 — Bố cục là ngôn ngữ không gian: Cách sắp xếp các yếu tố trong khung hình tạo ra trật tự đọc và cảm xúc. Bố cục không phải là quy tắc — đó là quyết định có ý thức về nơi đặt mọi thứ.
+
+PHẦN 2 — Các quy tắc bố cục chính: Rule of Thirds (4 điểm mạnh tại giao điểm lưới 3x3). Đường chân trời thấp (bầu trời chiếm 2/3 = hùng vĩ) vs cao (mặt đất chiếm 2/3 = trọng tải, áp lực). Đối xứng (trang nghiêm, hoàn hảo, giả tạo nhẹ). Dynamic Symmetry của Jay Hambridge.
+
+PHẦN 3 — Balanced vs Unbalanced: Khi nào dùng cân bằng (cảm giác ổn định, hoàn chỉnh). Khi nào dùng mất cân bằng (cảm giác bất an, chuyển động, drama). Crop và Reframing — cùng nội dung, crop khác nhau = ý nghĩa khác nhau.
+
+PHẦN 4 — Bố cục theo thể loại: Portrait (subject thường nằm ở 1/3, không gian hướng nhìn). Landscape (đường chân trời có chủ đích). Street photography (bố cục ngẫu nhiên được tổ chức hậu kỳ). Architecture (đường hội tụ và đối xứng).
+
+Nhấn mạnh: Quy tắc để phá vỡ — nhưng chỉ khi biết tại sao. HCB và khoảnh khắc quyết định. Thời lượng: 10-12 phút.
+
+---
+```
+
+--------------------------------------------------
+
+### 🎯 PROMPT BÀI 14: GÓC CHỤP (CAMERA ANGLE)
+
+```
+Tạo audio overview tiếng Việt cho bài 14: "Góc chụp (Camera Angle)" — khóa học Ngôn ngữ thị giác Alpha Photography.
+
+Nội dung cần trình bày:
+
+PHẦN 1 — Góc = Quan điểm = Quyền lực: Không có "góc đúng" — chỉ có góc phù hợp với mục đích kể chuyện. Quyết định góc chụp là quyết định về mối quan hệ giữa người xem và chủ thể.
+
+PHẦN 2 — Sáu góc chụp chính:
+- Eye Level (ngang mắt): Quan hệ ngang hàng, chân thực, không phán xét — most natural
+- High Angle (nhìn xuống): Nhân vật nhỏ bé, yếu đuối, bị kiểm soát, trẻ em nhìn từ người lớn
+- Low Angle (nhìn lên): Nhân vật hùng mạnh, uy nghiêm, đe dọa — chụp tòa nhà, anh hùng
+- Bird's Eye (từ trên xuống thẳng): Bản đồ, mẫu hoa văn, sự chi phối hoàn toàn, drone photography
+- Worm's Eye (từ dưới lên thẳng): Kiến trúc hùng vĩ, cây cao vút, cảm giác nhỏ bé tối đa
+- Dutch Angle (nghiêng): Bất ổn, tâm lý không bình thường, căng thẳng kịch tính — thường dùng trong thriller/horror
+
+PHẦN 3 — Góc và quyền lực: Alexander Rodchenko và Constructivism Liên Xô dùng góc cực đoan để tạo cảm giác xã hội chủ nghĩa hùng mạnh. Leni Riefenstahl dùng low angle tạo thần thánh hóa — ví dụ về góc như vũ khí chính trị.
+
+PHẦN 4 — Góc trong street photography: Bước đến sát và chụp eye level. Phản chiếu trong mặt kính. Góc từ hông (hip shooting).
+
+Phong cách: Thực tế và trực tiếp — nhiều ví dụ cụ thể, dễ áp dụng ngay. Thời lượng: 8-9 phút.
+
+---
+```
+
+--------------------------------------------------
+
+### 🎯 PROMPT BÀI 15: TIÊU ĐIỂM & ĐỘ SÂU TRƯỜNG ẢNH
+
+```
+Tạo audio overview tiếng Việt cho bài 15: "Tiêu điểm và Độ sâu trường ảnh" — khóa học Ngôn ngữ thị giác Alpha Photography.
+
+Nội dung cần trình bày:
+
+PHẦN 1 — DoF là gì: Vùng sắc nét (sharp zone) trong ảnh. Shallow DoF = vùng sắc nét mỏng, bokeh mềm mại. Deep DoF = cảnh rõ từ tiền cảnh đến hậu cảnh.
+
+PHẦN 2 — Ba yếu tố ảnh hưởng DoF: Khẩu độ f (f/1.4 = mỏng, f/16 = sâu). Tiêu cự mm (50mm = moderate, 85mm = telephoto nén và shallow). Khoảng cách (gần = mỏng, xa = sâu hơn).
+
+PHẦN 3 — Focus Point như tuyên bố ý đồ: Bạn lấy nét vào đâu = bạn coi gì là quan trọng nhất. Lấy nét vào mắt vs lấy nét vào bàn tay = hai câu chuyện hoàn toàn khác nhau. Selective Focus trong street photography — chỉ một người trong đám đông là sắc nét.
+
+PHẦN 4 — Kỹ thuật nâng cao: Hyperfocal Distance cho landscape (mọi thứ từ một khoảng nhất định đến vô tận đều sắc nét). Bokeh chất lượng: hình tròn hoàn hảo vs lục giác cứng, smooth vs nervous bokeh. Focus stacking cho macro photography.
+
+PHẦN 5 — Triết học: Shallow DoF = quyết định rằng thế giới xung quanh ít quan trọng hơn chủ thể. Deep DoF = quyết định rằng ngữ cảnh cũng quan trọng như chủ thể.
+
+Phong cách: Kỹ thuật pha nghệ thuật — giải thích tại sao khẩu độ không chỉ là con số mà là triết học sáng tác. Thời lượng: 9-10 phút.
+
+---
+```
+
+--------------------------------------------------
+
+### 🎯 PROMPT BÀI 16: NHỊP ĐIỆU (RHYTHM)
+
+```
+Tạo audio overview tiếng Việt cho bài 16: "Nhịp điệu (Rhythm)" — khóa học Ngôn ngữ thị giác Alpha Photography.
+
+Nội dung cần trình bày:
+
+PHẦN 1 — Tương đồng giữa âm nhạc và hình ảnh: Nhịp trong âm nhạc = sự lặp lại có chu kỳ. Nhịp trong hình ảnh = sự lặp lại của yếu tố thị giác tạo cảm giác chuyển động.
+
+PHẦN 2 — Các loại nhịp điệu: Regular Rhythm (đều đặn — hàng cột, loạt cửa sổ, đàn chim — ổn định nhưng có thể nhàm). Irregular Rhythm (bất đều — năng động hơn, sống động hơn, gần với tự nhiên). Progressive Rhythm (kích thước hoặc màu sắc thay đổi dần — tạo cảm giác di chuyển, zoom).
+
+PHẦN 3 — Điểm đột phá (Pattern Break): Một yếu tố khác biệt trong chuỗi đều trở thành điểm nhấn tự nhiên và mạnh nhất. Ví dụ: hàng cột trắng — một cột màu đỏ. Hàng người mặc đồng phục — một người mặc khác. Não tự động tập trung vào sự bất thường.
+
+PHẦN 4 — Thời gian và nhịp điệu: Long exposure biến dòng xe thành sợi ánh sáng = nhịp điệu của thời gian cô đọng. Stroboscopic photography đóng băng nhiều khoảnh khắc trong một ảnh. Timelapse như series ảnh theo nhịp thời gian.
+
+Phong cách: Lời dẫn phải có nhịp điệu như chính chủ đề — câu ngắn, câu dài, ngắn, dài. Thời lượng: 8-9 phút.
+
+---
+```
+
+--------------------------------------------------
+
+### 🎯 PROMPT BÀI 17: CÂN BẰNG (BALANCE)
+
+```
+Tạo audio overview tiếng Việt cho bài 17: "Cân bằng (Balance)" — khóa học Ngôn ngữ thị giác Alpha Photography.
+
+Nội dung cần trình bày:
+
+PHẦN 1 — Cân bằng thị giác là bản năng: Não người nhận ra sự mất cân bằng ngay lập tức — như cảm giác ghế chỉ có 3 chân. Cân bằng tạo ra cảm giác hoàn chỉnh và thoải mái.
+
+PHẦN 2 — Hai loại cân bằng: Đối xứng (Symmetrical) — ổn định, trang nghiêm, cổ điển, đôi khi giả tạo (kiến trúc, hồ phản chiếu, mặt người nhìn thẳng). Bất đối xứng (Asymmetrical) — tự nhiên hơn, năng động hơn, thú vị hơn (chủ thể nhỏ + khoảng trống lớn).
+
+PHẦN 3 — Trọng lượng thị giác: Màu tối nặng hơn màu sáng. Chi tiết phức tạp nặng hơn vùng đơn giản. Màu bão hòa (saturated) nặng hơn màu nhạt. Kích thước lớn nặng hơn nhỏ. Vị trí cao nặng hơn thấp (ngược với vật lý học!).
+
+PHẦN 4 — Cân bằng màu sắc: Màu nóng nhỏ có thể cân bằng màu lạnh lớn. Một điểm đỏ nhỏ trong biển xanh = cân bằng bất đối xứng hoàn hảo.
+
+PHẦN 5 — Mất cân bằng có chủ đích: Tạo sự bất an, chuyển động tâm lý, kịch tính. Cân bằng trong series ảnh — làm thế nào để các ảnh cân bằng nhau khi đặt cạnh nhau trong album.
+
+Phong cách: Cân bằng giữa học thuật và thực hành — nặng về ví dụ cụ thể. Thời lượng: 8-9 phút.
+
+---
+```
+
+--------------------------------------------------
+
+### 🎯 PROMPT BÀI 18: PHÂN CẤP (HIERARCHY)
+
+```
+Tạo audio overview tiếng Việt cho bài 18: "Phân cấp (Hierarchy)" — khóa học Ngôn ngữ thị giác Alpha Photography.
+
+Nội dung cần trình bày:
+
+PHẦN 1 — Phân cấp thị giác = Trật tự đọc ảnh: Mắt đọc ảnh theo thứ tự nhất định dựa trên các tín hiệu thị giác. Nhiệm vụ của nhiếp ảnh gia là kiểm soát thứ tự đó. Khi không có phân cấp rõ ràng — mắt bối rối, ảnh thất bại.
+
+PHẦN 2 — Ba cấp độ: Primary Subject (chủ thể chính — phải nổi bật nhất bằng kích thước, ánh sáng, vị trí, tương phản). Secondary Elements (yếu tố phụ — hỗ trợ câu chuyện, không cạnh tranh với chính). Background Details (chi tiết nền — thêm ngữ cảnh, không phải điểm nhấn).
+
+PHẦN 3 — Công cụ tạo phân cấp: Thứ bậc ánh sáng (vùng sáng nhất = quan trọng nhất). Thứ bậc màu sắc (màu saturated cao > desaturated). Thứ bậc kích thước (lớn hơn = quan trọng hơn, trừ khi có yếu tố override khác). Thứ bậc vị trí (trung tâm và giao điểm 1/3 là điểm mạnh nhất).
+
+PHẦN 4 — Tại sao ảnh thất bại về phân cấp: Tất cả mọi thứ đều "hét" cùng lúc — không có chủ thể chính. Nền quá phức tạp cạnh tranh với chủ thể. Màu sắc không nhất quán tạo nhiều điểm nhấn.
+
+Bài tập đọc ảnh: Viết ra thứ tự mắt di chuyển trong 5 bức ảnh — nhận dạng cơ chế phân cấp nào đang hoạt động.
+
+Phong cách: Có hệ thống và logic như nhà thiết kế UX giải thích user flow. Thời lượng: 8-9 phút.
+
+---
+```
+
+--------------------------------------------------
+
+### 🎯 PROMPT BÀI 19: TÍNH THỐNG NHẤT (UNITY)
+
+```
+Tạo audio overview tiếng Việt cho bài 19 — bài cuối: "Tính thống nhất (Unity)" — khóa học Ngôn ngữ thị giác Alpha Photography by Trungvt.
+
+Phong cách: Sâu sắc, truyền cảm hứng, như lời kết của một thầy giáo gửi cho học trò trước khi họ bước ra thế giới — pha trộn giữa triết học, thực hành, và cảm xúc. Đây là bài cảm xúc nhất trong toàn khóa.
+
+Cấu trúc 12-15 phút — bài dài nhất vì là tổng kết:
+1. MỞ ĐẦU 90 giây: "18 bài trước là 18 nốt nhạc. Bài này là về cách chơi thành bản nhạc." Cảm giác của sự hoàn chỉnh.
+2. UNITY LÀ GÌ 2 phút: Định nghĩa, phân biệt Unity vs Monotony, analogy dàn nhạc giao hưởng.
+3. BA CHIỀU KÍCH 3 phút: Unity trong ảnh đơn, Series, Phong cách cá nhân.
+4. HÀNH TRÌNH PHONG CÁCH 3 phút: Ba giai đoạn Imitation, Fusion, Innovation với ví dụ nhiếp ảnh gia nổi tiếng.
+5. TỔNG HỢP 18 BÀI 2 phút: Điểm qua nhanh 18 yếu tố và cách chúng hòa vào Unity.
+6. LỜI KẾT CẢM XÚC 2 phút: Không phải về kỹ thuật — về sự trung thực trong nghệ thuật. Câu hỏi cuối: "Bức ảnh này có phải là bạn không?"
+7. CÁM ƠN VÀ TIẾP TỤC: Nhắc lại tên khóa học, cảm ơn học viên, mời tiếp tục hành trình.
+
+Lưu ý đặc biệt: Giọng điệu ấm áp và gần gũi hơn tất cả các bài trước. Đây là bài học về sự trung thực hơn là kỹ thuật. Kết thúc bằng câu nói có thể trở thành châm ngôn của học viên.
+
+---
+
+## 📋 BẢNG TÓM TẮT 19 BÀI
+
+| Bài | Tiêu đề | Từ khóa cốt lõi | Nhiếp ảnh gia tham khảo |
+|-----|---------|-----------------|------------------------|
+| 1 | Sức mạnh hình ảnh | Imago, Amygdala, Kuleshov, Punctum | Nick Ut, Roland Barthes |
+| 2 | Mục đích nhiếp ảnh | Documentary, Evocative, Communicative | Dorothea Lange, Ansel Adams |
+| 3 | Ngôn ngữ biểu tượng | Icon, Index, Symbol, Juxtaposition | Fan Ho, Steve McCurry |
+| 4 | Đường nét | Leading Lines, Vanishing Point, S-Curve | HCB, Ansel Adams |
+| 5 | Hình dạng | Gestalt, Figure-Ground, Closure, Silhouette | Fan Ho, Edward Weston |
+| 6 | Không gian | Negative Space, Golden Ratio, Ma | Michael Kenna, Hiroshi Sugimoto |
+| 7 | Ánh sáng | Chiaroscuro, Zone System, Golden Hour | Caravaggio, Ansel Adams |
+| 8 | Màu sắc | Complementary, Color Story, Teal & Orange | Alex Webb, William Eggleston |
+| 9 | Tương phản | High/Low Key, Conceptual Contrast | Sebastião Salgado, HCB |
+| 10 | Chất liệu | Texture, Side Light, Macro | Edward Weston, Karl Blossfeldt |
+| 11 | Tỷ lệ & Kích thước | Golden Ratio, Scale Distortion | Ansel Adams, René Magritte |
+| 12 | Bầu không khí | Fog, Atmospheric Perspective, Ma | Hiroshi Sugimoto, Bill Brandt |
+| 13 | Bố cục | Rule of Thirds, Dynamic Symmetry | HCB, Saul Leiter |
+| 14 | Góc chụp | Eye Level, High/Low Angle, Dutch Angle | Alexander Rodchenko, Walker Evans |
+| 15 | Tiêu điểm & DoF | Shallow/Deep DoF, Bokeh, Hyperfocal | Hiroshi Sugimoto, Ansel Adams |
+| 16 | Nhịp điệu | Pattern, Progressive Rhythm, Long Exposure | André Kertész |
+| 17 | Cân bằng | Symmetrical, Asymmetrical, Visual Weight | Wim Wenders |
+| 18 | Phân cấp | Visual Hierarchy, Reading Order | Richard Avedon, Irving Penn |
+| 19 | Tính thống nhất | Unity, Personal Style, Imitation-Fusion-Innovation | Tất cả bậc thầy |
+```
+
+--------------------------------------------------
+

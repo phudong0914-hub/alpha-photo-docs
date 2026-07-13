@@ -1,0 +1,85 @@
+# BÀI 2 — MỤC ĐÍCH NHIẾP ẢNH
+
+## 📄 NỘI DUNG
+
+**KHÓA HỌC NGÔN NGỮ THỊ GIÁC — BÀI 2: MỤC ĐÍCH NHIẾP ẢNH**
+
+Trước khi đặt máy lên, trước khi chọn ống kính, trước khi nghĩ đến bố cục — một câu hỏi duy nhất phân biệt nhiếp ảnh gia tư duy với người bấm máy phản xạ: "Hình ảnh này tồn tại để làm gì?"
+
+---
+
+### PHẦN I: HỆ THỐNG PHÂN LOẠI MỤC ĐÍCH HÌNH ẢNH
+
+Mục đích của hình ảnh là một hệ thống phân tầng. Một bức ảnh có thể phục vụ nhiều mục đích, nhưng luôn có một mục đích chủ đạo (primary intent) định hướng toàn bộ các quyết định sáng tác.
+
+**1. Documentary Intent — Chứng nhân trung thực của thực tế**
+
+Đây là mục đích cổ xưa nhất và nền tảng nhất. Từ Matthew Brady trong Nội chiến Mỹ (1861) đến ảnh báo chí hiện đại.
+
+Các nguyên tắc cốt lõi:
+- Tính xác thực (Authenticity): Không dàn dựng, không chỉnh sửa làm sai lệch sự kiện. Nhiếp ảnh gia là người quan sát, không phải đạo diễn.
+- Tính bối cảnh (Contextualization): Một khoảnh khắc bị tách khỏi ngữ cảnh có thể bóp méo sự thật nguy hiểm hơn là không có ảnh.
+- Tính trách nhiệm (Accountability): Ảnh tư liệu mang trọng lượng pháp lý và lịch sử. Người chụp là nhân chứng có đạo đức.
+- Tính liên tục (Continuity): Series ảnh có chiều sâu hơn đơn ảnh.
+
+Mâu thuẫn nội tại: Không có ảnh nào hoàn toàn khách quan. Nhiếp ảnh gia tư liệu giỏi không phủ nhận sự chủ quan — họ nhận thức và quản lý nó có đạo đức.
+
+**2. Communicative Intent — Hình ảnh như ngôn ngữ thông tin**
+
+Khi mục đích là truyền đạt thông tin cụ thể, hiệu quả đo bằng mức độ thông điệp đến đúng người nhận.
+
+Ba điều kiện:
+- Clarity: Chủ thể chính phải nhận dạng ngay. Nếu cần hơn 3 giây để hiểu — hình ảnh đó thất bại.
+- Relevance: Thông điệp thị giác không tồn tại trong chân không. Màu đỏ mang ý nghĩa khác trong văn hóa phương Tây và phương Đông.
+- Memorability: Hình ảnh có tính ghi nhớ cao thường có một yếu tố bất ngờ, màu sắc đặc trưng, hoặc cảm xúc đủ mạnh.
+
+**3. Evocative Intent — Hình ảnh như cảm xúc được vật chất hóa**
+
+Lãnh địa của fine art photography, portrait nghệ thuật, landscape photography đỉnh cao. Mục đích không phải là cho người xem biết điều gì — mà là khiến họ cảm thấy điều gì đó mà ngôn ngữ không diễn đạt được.
+
+Nghịch lý: Bạn không thể kiểm soát hoàn toàn cảm xúc người xem — nhưng bạn có thể thiết kế môi trường thị giác làm tăng xác suất họ cảm nhận theo hướng nhất định. Đây là sự khác biệt giữa manipulation (thao túng) và invitation (mời gọi).
+
+Bảng vector cảm xúc:
+- Cô đơn/Xa cách: Negative space lớn, figure nhỏ, tông lạnh — Michael Kenna, Fan Ho
+- Ấm áp/Thuộc về: Ánh vàng, khoảng cách gần, bokeh mềm — Sally Mann, HCB
+- Hùng vĩ/Choáng ngợp: Tỷ lệ người vs cảnh, đường chân trời thấp — Ansel Adams
+- Bí ẩn/Căng thẳng: Bóng tối, khuôn mặt không rõ — Saul Leiter, Daido Moriyama
+- Hoài niệm/Ký ức: Tông faded, grain phim — Vivian Maier, William Eggleston
+
+**4. Experimental Intent — Hình ảnh như câu hỏi**
+
+Lãnh địa của nhiếp ảnh thực nghiệm và nghệ thuật đương đại. Mục đích không phải là trả lời mà là đặt câu hỏi — về bản chất của hình ảnh, về thực tại, về nhận thức.
+
+---
+
+### PHẦN II: FRAMEWORK XÁC ĐỊNH MỤC ĐÍCH TRƯỚC KHI CHỤP
+
+Bốn câu hỏi cần hỏi trước mỗi shoot:
+
+Q1 — WHO? Ai sẽ xem ảnh này? Định hình ngôn ngữ thị giác phù hợp với người nhận.
+
+Q2 — WHAT do you want them to FEEL/KNOW/DO? Feel gợi Evocative Intent. Know gợi Communicative/Documentary Intent. Do gợi Commercial/Call-to-action Intent.
+
+Q3 — WHERE will this image live? Bối cảnh hiển thị quyết định format, tỷ lệ, độ phức tạp.
+
+Q4 — WHEN? Thời điểm phát hành ảnh ảnh hưởng đến cách ảnh được đọc.
+
+---
+
+### PHẦN III: SINGLE IMAGE vs. SERIES
+
+Single Image Excellence: Đòi hỏi mật độ thông tin cao trong một khuôn hình. Phải tự giải thích được (self-explanatory). Khoảnh khắc quyết định — Decisive Moment của Henri Cartier-Bresson.
+
+Series Strategy: Narrative arc có mở đầu, phát triển, đỉnh điểm, kết thúc. Visual consistency nhất quán về màu sắc, phong cách, ánh sáng. Thematic unity — mỗi ảnh bổ sung thêm tầng nghĩa cho series.
+
+---
+
+### PHẦN IV — ELITE: ĐẠO ĐỨC CỦA MỤC ĐÍCH
+
+Mục đích ảnh hưởng trực tiếp đến đạo đức sáng tác:
+- Documentary: Không được dàn dựng, không được chỉnh sửa làm sai sự thật
+- Commercial: Phải minh bạch về tính quảng cáo
+- Art: Được phép thao túng thực tại — nhưng cần rõ ràng đây là nghệ thuật
+- Social media: Ranh giới mờ nhạt nhất, nguy cơ cao nhất
+
+Câu hỏi đạo đức cốt lõi: "Nếu chủ thể trong ảnh xem ảnh này, họ có cảm thấy được tôn trọng không?"

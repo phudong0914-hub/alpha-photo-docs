@@ -19,6 +19,8 @@ import {
 } from '@hugeicons/core-free-icons';
 import { motion, AnimatePresence } from 'framer-motion';
 import DocsLayout from '@/components/docs-layout';
+import { ImageComparisonSlider } from '@/components/image-comparison-slider';
+import { VisualDeconstructionLab } from '@/components/visual-deconstruction-lab';
 
 // Types for diagnostic pins
 interface DiagnosticPin {
@@ -151,13 +153,31 @@ export default function PhantichAnhPage() {
   const [critiqueReport, setCritiqueReport] = useState<string | null>(null);
   const [scores, setScores] = useState({ bocuc: 0, anhsang: 0, mausac: 0, chatlieu: 0 });
   const [detailedScores, setDetailedScores] = useState<DetailedScores>(EMPTY_DETAILED_SCORES);
+  
+  // Premium View Mode (Canvas vs Slider comparison)
+  const [viewMode, setViewMode] = useState<'canvas' | 'slider'>('canvas');
+  
+  // Premium Critique History
+  interface HistoryItem {
+    id: string;
+    date: string;
+    title: string;
+    imageSrc: string;
+    scores: typeof scores;
+    detailedScores: DetailedScores;
+    critique: string;
+    pins: DiagnosticPin[];
+    aiPromptData: any;
+  }
+  const [critiqueHistory, setCritiqueHistory] = useState<HistoryItem[]>([]);
 
   // Custom photo metadata states
   const [imageSubject, setImageSubject] = useState('');
   const [aiPromptData, setAiPromptData] = useState<{
     subject: string;
-    mj_prompt: string;
-    de_prompt: string;
+    gpt_image_prompt: string;
+    midjourney_prompt: string;
+    nanobana_prompt: string;
   } | null>(null);
 
   // Comparison snapshot state
@@ -188,10 +208,12 @@ export default function PhantichAnhPage() {
     setDetailedScores(EMPTY_DETAILED_SCORES);
     setSelectedDemoId(null);
     setAiPromptData(null);
+    setViewMode('canvas');
   };
 
   const clearComparison = () => {
     setOriginalSnapshot(null);
+    setViewMode('canvas');
   };
 
   // JSON Prompt generator states
@@ -213,11 +235,79 @@ export default function PhantichAnhPage() {
     } else {
       localStorage.setItem('alpha-gemini-key', 'AIzaSyAcyWnzMrXZSD9XrJAbCUOAl2Ikklovcl8');
     }
+
+    // Load critique history from localstorage
+    try {
+      const savedHistory = localStorage.getItem('alpha-critique-history');
+      if (savedHistory) {
+        setCritiqueHistory(JSON.parse(savedHistory));
+      }
+    } catch (e) {
+      console.error(e);
+    }
   }, []);
 
   const handleSaveApiKey = (key: string) => {
     setApiKey(key);
     localStorage.setItem('alpha-gemini-key', key);
+  };
+
+  // Helper to add item to history
+  const addToHistory = (
+    title: string,
+    img: string,
+    sc: typeof scores,
+    detSc: DetailedScores,
+    crit: string,
+    pn: DiagnosticPin[],
+    aiPrompt: any
+  ) => {
+    const newItem: HistoryItem = {
+      id: Math.random().toString(36).substring(2, 9),
+      date: new Date().toLocaleString("vi-VN", {
+        hour: "2-digit",
+        minute: "2-digit",
+        day: "2-digit",
+        month: "2-digit",
+      }),
+      title,
+      imageSrc: img,
+      scores: sc,
+      detailedScores: detSc,
+      critique: crit,
+      pins: pn,
+      aiPromptData: aiPrompt,
+    };
+    const updatedHistory = [newItem, ...critiqueHistory.slice(0, 9)]; // Keep max 10 items
+    setCritiqueHistory(updatedHistory);
+    try {
+      localStorage.setItem('alpha-critique-history', JSON.stringify(updatedHistory));
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  const loadHistoryItem = (item: HistoryItem) => {
+    setImageSrc(item.imageSrc);
+    setScores(item.scores);
+    setDetailedScores(item.detailedScores);
+    setCritiqueReport(item.critique);
+    setPins(item.pins);
+    setAiPromptData(item.aiPromptData);
+    setSelectedDemoId(null);
+    setActivePinId(null);
+    setViewMode('canvas');
+  };
+
+  const deleteHistoryItem = (id: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    const updated = critiqueHistory.filter((item) => item.id !== id);
+    setCritiqueHistory(updated);
+    try {
+      localStorage.setItem('alpha-critique-history', JSON.stringify(updated));
+    } catch (e) {
+      console.error(e);
+    }
   };
 
   // Helper to compile optimized prompt JSON
@@ -259,31 +349,41 @@ export default function PhantichAnhPage() {
 
     // Build positive and negative prompts dynamically
     let focalSubject = "Custom uploaded photograph scene";
-    let positivePrompt = "";
+    let gptImagePrompt = "";
+    let midjourneyPrompt = "";
+    let nanobanaPrompt = "";
     let negativePrompt = "blurry, low resolution, bad composition, distorted focus, noisy, artifacting";
 
     if (isKOL) {
       focalSubject = "Beautiful Vietnamese female model (KOL) wearing a sky-blue bikini set";
-      positivePrompt = "A professional high-end fashion swimwear campaign advertisement banner, featuring a beautiful Vietnamese model KOL in a sky-blue bikini with delicate lace embroidery, posing on a sunny tropical beach during golden hour. Palm leaves framing, 85mm lens, f/1.8, cinematic lighting, rim light, warm and cool color contrast, clean composition, commercial catalog style --ar 9:16 --v 6.0";
-      negativePrompt = "blurry, low resolution, bad typography, squished text, overlapping Vietnamese diacritics, poor line spacing, distorted anatomy, oversaturated colors, harsh direct flash, flat lighting, unrealistic skin texture";
+      gptImagePrompt = "A highly realistic, photographic advertising swimwear campaign, featuring a beautiful Vietnamese female model (KOL) wearing a sky-blue bikini with fine floral lace embroidery, posing natural three-quarter view on a soft white sand tropical beach. Warm natural sunlight at 45 degrees, gentle rim light highlighting hair. Canon EOS R5, 85mm lens, f/2.2, crisp details, natural skin texture, realistic beach waves, 8k resolution, authentic catalog photo.";
+      midjourneyPrompt = "A professional high-end fashion swimwear campaign advertisement banner, featuring a beautiful Vietnamese model KOL in a sky-blue bikini with delicate lace embroidery, posing on a sunny tropical beach during golden hour. Palm leaves framing, 85mm lens, f/1.8, cinematic lighting, rim light, warm and cool color contrast, clean composition, commercial catalog style --ar 9:16 --v 6.0";
+      nanobanaPrompt = "Beautiful swimwear portrait photography. A Vietnamese model posing on a beach, bikini sky-blue color. Golden sunset light from the side, rim light highlighting details. Add palm leaves on the top-right corner to create sub-framing. Clean font layout on the left, clear line spacing.";
+      negativePrompt = "blurry, low resolution, bad typography, squished text, overlapping diacritics, poor line spacing, distorted anatomy, oversaturated colors, harsh direct flash, flat lighting, unrealistic skin texture";
     } else if (isDesert) {
       focalSubject = "Winding desert sand dunes at sunset";
-      positivePrompt = "A national geographic fine-art landscape photograph. sweeping curves of desert sand dunes at sunset, sharp ridges casting deep blue shadows, warm golden sand texture, a single lone traveler in a crimson red cloak stands on the dune peak, rule of thirds, wide angle shot, high contrast, cinematic --ar 16:9 --style raw --v 6.0";
+      gptImagePrompt = "A realistic, high-fidelity landscape photograph of sweeping desert sand dunes at sunset. Sharp ridges casting precise cool blue shadows, highly detailed warm golden sand ripples in close foreground. A single traveler in a crimson red cloak stands at the right-third dune peak. 35mm lens, f/8, natural dramatic lighting, photographic accuracy.";
+      midjourneyPrompt = "A national geographic fine-art landscape photograph. sweeping curves of desert sand dunes at sunset, sharp ridges casting deep blue shadows, warm golden sand texture, a single lone traveler in a crimson red cloak stands on the dune peak, rule of thirds, wide angle shot, high contrast, cinematic --ar 16:9 --style raw --v 6.0";
+      nanobanaPrompt = "Sweeping desert sand dunes landscape under a sunset sky. Draw sharp crest lines with deep blue shadows. In the foreground, show highly defined sand wave textures. Place a small traveler wearing a bright red cloak on the top ridge as a visual focal point.";
     } else {
       // Custom uploaded photo
       if (aiPromptData) {
         focalSubject = aiPromptData.subject;
-        positivePrompt = aiPromptData.mj_prompt;
+        gptImagePrompt = aiPromptData.gpt_image_prompt;
+        midjourneyPrompt = aiPromptData.midjourney_prompt;
+        nanobanaPrompt = aiPromptData.nanobana_prompt;
       } else {
         const customSubject = imageSubject.trim() || "A custom scene";
         focalSubject = customSubject;
-        positivePrompt = `A professional fine-art commercial photograph of ${customSubject}, optimized composition reflecting rule of thirds, clean details, balanced cinematic studio lighting setup, rich depth of field, high dynamic range --ar 16:9 --v 6.0`;
+        gptImagePrompt = `A highly realistic, photographic representation of ${customSubject}, balanced natural lighting, crisp details, high fidelity, 8k resolution, authentic photographic style.`;
+        midjourneyPrompt = `A professional fine-art commercial photograph of ${customSubject}, optimized composition reflecting rule of thirds, clean details, balanced cinematic studio lighting setup, rich depth of field, high dynamic range --ar 16:9 --v 6.0`;
+        nanobanaPrompt = `A creative depiction of ${customSubject}, balanced composition with rule of thirds, high detail, descriptive scene elements.`;
       }
     }
 
     const promptObj = {
       $schema_version: "2.1",
-      target_engine_standard: "Midjourney v6.0 / Stable Diffusion XL (SDXL)",
+      target_engine_standard: "GPT Image 2 (Realism) / Midjourney v6.0 (Artistic) / Nanobana 2 (Creative)",
       analyzed_image_profile: {
         category: isKOL ? "Commercial Fashion Advertisement Banner" : isDesert ? "Fine Art Landscape Photography" : "Custom Uploaded Artwork/Photo",
         original_focal_subject: focalSubject,
@@ -300,7 +400,7 @@ export default function PhantichAnhPage() {
             ? "A high-end two-piece sky-blue swimwear bikini set with delicate floral lace embroidery and golden chain shoulder straps."
             : "N/A",
           posing_and_expression: isKOL 
-            ? "Posing gracefully on a beach, natural three-quarter view, looking towards the camera with a confident, welcoming expression."
+            ? "Posing gracefully on a beach, natural three-quarter view, looking towards the camera with a welcoming expression."
             : "N/A"
         },
         environment_and_atmosphere: {
@@ -335,7 +435,9 @@ export default function PhantichAnhPage() {
         } : null
       },
       optimized_generative_prompts: {
-        positive_prompt_raw: positivePrompt,
+        gpt_image_prompt: gptImagePrompt,
+        midjourney_prompt: midjourneyPrompt,
+        nanobana_prompt: nanobanaPrompt,
         negative_prompt_raw: negativePrompt
       }
     };
@@ -436,7 +538,7 @@ export default function PhantichAnhPage() {
     setCritiqueReport(null);
 
     // Scenario A: Real Gemini API critique
-    if (apiKey.trim()) {
+    if (apiKey.trim() && apiKey !== 'AIzaSyAcyWnzMrXZSD9XrJAbCUOAl2Ikklovcl8') {
       try {
         setAnalysisProgress('Đang tải tệp ảnh lên và mã hóa dữ liệu...');
         await new Promise(r => setTimeout(r, 800));
@@ -504,12 +606,12 @@ Cuối báo cáo, xuất 2 khối dữ liệu kỹ thuật theo định dạng c
 
 ||SCORES||{"sucManh":85,"mucDich":80,"bieuTuong":70,"duongNet":75,"hinhKhoi":80,"khongGian":70,"anhSang":65,"mauSac":85,"tuongPhan":80,"chatLieu":70,"kichThuoc":78,"khongKy":65,"bocuc":82,"gocChup":75,"tieuDiem":70,"nhipDieu":68,"canBang":72,"phamCap":80,"tinhThong":75}||
 
-||PROMPT_CONFIG||{"subject":"Short English description of actual subject in this photo","mj_prompt":"Optimized Midjourney v6 prompt correcting all identified weaknesses with specific lighting, composition and photography technique instructions","de_prompt":"DALL-E 3 optimized prompt for this specific scene"}||
+||PROMPT_CONFIG||{"subject":"Short English description of actual subject in this photo","gpt_image_prompt":"Optimized prompt for GPT Image 2 (focusing on extreme realism, high-fidelity photographic accuracy, natural textures, matching reality and the original photo details) correcting all weaknesses","midjourney_prompt":"Optimized prompt for Midjourney v6.0 (focusing on artistic and aesthetic excellence, cinematic styling, rich color grading, beautiful rendering, stylized look) correcting all weaknesses","nanobana_prompt":"Optimized prompt for Nanobana 2 (focusing on creative visual cues, descriptive detail, and conversational prompt instructions) correcting all weaknesses"}||
 
 QUAN TRỌNG: Thay thế tất cả các con số trong ||SCORES|| bằng điểm số THỰC TẾ (0-100) của bức ảnh này dựa trên phân tích của bạn cho từng tiêu chí. Không giữ nguyên các số mẫu trên.`;
 
         const response = await fetch(
-          `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
+          `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
           {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -532,13 +634,15 @@ QUAN TRỌNG: Thay thế tất cả các con số trong ||SCORES|| bằng điể
         if (!textCritique) throw new Error('Không nhận được phản hồi phân tích từ Gemini.');
 
         let cleanedReport = textCritique;
+        let safeScores = { ...EMPTY_DETAILED_SCORES };
+        let parsedAiData = null;
 
         // Parse ||SCORES|| block — real 19-principle scores from Gemini
         const scoresMatch = textCritique.match(/\|\|SCORES\|\|(\{[\s\S]*?\})\|\|/);
         if (scoresMatch) {
           try {
             const rawScores = JSON.parse(scoresMatch[1].trim()) as Partial<DetailedScores>;
-            const safeScores: DetailedScores = { ...EMPTY_DETAILED_SCORES, ...rawScores };
+            safeScores = { ...EMPTY_DETAILED_SCORES, ...rawScores };
             setDetailedScores(safeScores);
             setScores(computeAggregates(safeScores));
             cleanedReport = cleanedReport.replace(/\|\|SCORES\|\|[\s\S]*?\|\|/, '').trim();
@@ -551,9 +655,9 @@ QUAN TRỌNG: Thay thế tất cả các con số trong ||SCORES|| bằng điể
         const configMatch = cleanedReport.match(/\|\|PROMPT_CONFIG\|\|([\s\S]*?)\|\|/);
         if (configMatch) {
           try {
-            const aiData = JSON.parse(configMatch[1].trim());
-            setAiPromptData(aiData);
-            cleanedReport = cleanedReport.replace(/\|\|PROMPT_CONFIG\|\|[\s\S]*?\|\|/, '').trim();
+            parsedAiData = JSON.parse(configMatch[1].trim());
+            setAiPromptData(parsedAiData);
+            cleanedReport = cleanedReport.replace(/\|\|PROMPT_CONFIG\|\|([\s\S]*?)\|\|/, '').trim();
           } catch (e) {
             console.error('Failed to parse PROMPT_CONFIG block', e);
             setAiPromptData(null);
@@ -564,6 +668,13 @@ QUAN TRỌNG: Thay thế tất cả các con số trong ||SCORES|| bằng điể
 
         // Store clean report
         setCritiqueReport(cleanedReport);
+        
+        // Save to critique history
+        const finalScores = computeAggregates(safeScores);
+        const title = selectedDemoId 
+          ? (selectedDemoId === 'demo-portrait' ? 'Banner Thời trang Biển (KOL)' : 'Đường cong cồn cát Hoàng hôn') 
+          : (imageSubject.trim() || 'Ảnh tự tải lên');
+        addToHistory(title, imageSrc, finalScores, safeScores, cleanedReport, pins, parsedAiData);
 
       } catch (err: any) {
         alert(err.message || 'Lỗi kết nối API. Vui lòng kiểm tra lại API Key.');
@@ -652,7 +763,7 @@ ${bads.length > 0
       const goodCount = goods.length;
       const baseScore = Math.floor((goodCount / total) * 40) + 55; // range 55-95
 
-      setScores({
+      const calculatedScores = {
         bocuc: activePins.some(p => p.category === 'bocuc') 
           ? Math.min(98, baseScore + (goods.filter(p => p.category === 'bocuc').length * 5) - (bads.filter(p => p.category === 'bocuc').length * 8)) 
           : 75,
@@ -665,10 +776,28 @@ ${bads.length > 0
         chatlieu: activePins.some(p => p.category === 'chatlieu') 
           ? Math.min(98, baseScore + (goods.filter(p => p.category === 'chatlieu').length * 5) - (bads.filter(p => p.category === 'chatlieu').length * 8)) 
           : 70
-      });
+      };
 
+      setScores(calculatedScores);
       setCritiqueReport(compiledReport);
       setIsAnalyzing(false);
+
+      // Create synthetic 19 detailed scores for offline review
+      const offlineDetailedScores: DetailedScores = {
+        sucManh: calculatedScores.chatlieu, mucDich: calculatedScores.chatlieu, bieuTuong: calculatedScores.chatlieu,
+        duongNet: calculatedScores.chatlieu, hinhKhoi: calculatedScores.chatlieu, khongGian: calculatedScores.anhsang,
+        anhSang: calculatedScores.anhsang, mauSac: calculatedScores.mausac, tuongPhan: calculatedScores.mausac,
+        chatLieu: calculatedScores.mausac, kichThuoc: calculatedScores.bocuc, khongKy: calculatedScores.chatlieu,
+        bocuc: calculatedScores.bocuc, gocChup: calculatedScores.bocuc, tieuDiem: calculatedScores.bocuc,
+        nhipDieu: calculatedScores.bocuc, canBang: calculatedScores.anhsang, phamCap: calculatedScores.chatlieu,
+        tinhThong: calculatedScores.chatlieu
+      };
+
+      const title = selectedDemoId 
+        ? (selectedDemoId === 'demo-portrait' ? 'Banner Thời trang Biển (KOL)' : 'Đường cong cồn cát Hoàng hôn') 
+        : (imageSubject.trim() || 'Ảnh tự chẩn đoán');
+      
+      addToHistory(title, imageSrc, calculatedScores, offlineDetailedScores, compiledReport, activePins, null);
     }
   };
 
@@ -903,6 +1032,25 @@ ${bads.length > 0
                   )}
                 </div>
 
+                {originalSnapshot && imageSrc && (
+                  <div className="flex gap-1.5 mb-3 bg-black/45 p-1 rounded-lg border border-white/5">
+                    <button
+                      type="button"
+                      onClick={() => setViewMode('canvas')}
+                      className={`flex-1 py-1.5 rounded-md text-[11px] font-semibold cursor-pointer transition-colors ${viewMode === 'canvas' ? 'bg-[#a94338] text-white font-bold' : 'text-[#9d9db5] hover:text-white'}`}
+                    >
+                      Bàn dựng Chẩn đoán (Pins)
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setViewMode('slider')}
+                      className={`flex-1 py-1.5 rounded-md text-[11px] font-semibold cursor-pointer transition-colors ${viewMode === 'slider' ? 'bg-[#a94338] text-white font-bold' : 'text-[#9d9db5] hover:text-white'}`}
+                    >
+                      Thanh trượt Before / After
+                    </button>
+                  </div>
+                )}
+
                 {imageSrc && !selectedDemoId && (
                   <div className="mb-4 p-3.5 rounded-xl bg-black/45 border border-white/5">
                     <label className="text-[9px] font-mono text-[#38bdf8] block mb-1.5 uppercase tracking-wider">
@@ -944,6 +1092,17 @@ ${bads.length > 0
                           className="hidden"
                         />
                       </label>
+                    </div>
+                  ) : viewMode === 'slider' && originalSnapshot ? (
+                    /* Before/After slider mode */
+                    <div className="w-full h-full">
+                      <ImageComparisonSlider
+                        originalSrc={originalSnapshot.src}
+                        improvedSrc={imageSrc}
+                        originalLabel="Ảnh Gốc (Before)"
+                        improvedLabel="Ảnh Cải Tiến (After)"
+                        aspectRatio="aspect-auto w-full h-full"
+                      />
                     </div>
                   ) : (
                     // Interactive Canvas Screen
@@ -1135,6 +1294,54 @@ ${bads.length > 0
                 </div>
               )}
 
+              {/* CRITIQUE HISTORY PANEL */}
+              {critiqueHistory.length > 0 && (
+                <div className="p-6 rounded-2xl bg-white/[0.01] border border-white/[0.04] backdrop-blur-md mt-6">
+                  <h3 className="text-sm font-serif text-slate-200 mb-4 flex items-center gap-1.5">
+                    <HugeiconsIcon icon={ReloadIcon} size={14} className="text-[#a855f7] animate-spin-slow" />
+                    <span>Lịch sử thẩm định gần đây:</span>
+                  </h3>
+                  
+                  <div className="flex flex-col gap-3 max-h-[300px] overflow-y-auto pr-1">
+                    {critiqueHistory.map((item) => {
+                      const totalScore = Math.round(Object.values(item.detailedScores).reduce((a, b) => a + b, 0) / 19);
+                      return (
+                        <div
+                          key={item.id}
+                          onClick={() => loadHistoryItem(item)}
+                          className="flex items-center gap-4 p-2.5 rounded-xl border border-white/[0.03] bg-black/20 hover:border-white/10 hover:bg-white/[0.01] transition-all cursor-pointer group"
+                        >
+                          <div className="w-12 aspect-square rounded overflow-hidden bg-black shrink-0 border border-white/5">
+                            <img src={item.imageSrc} className="w-full h-full object-cover" alt={item.title} />
+                          </div>
+                          
+                          <div className="flex-grow min-w-0">
+                            <div className="flex justify-between items-start gap-1">
+                              <h4 className="text-xs font-semibold text-slate-200 truncate">{item.title}</h4>
+                              <span className="text-[9px] font-mono text-emerald-400 font-bold shrink-0">{totalScore}%</span>
+                            </div>
+                            <div className="flex justify-between items-center mt-1">
+                              <span className="text-[9px] font-mono text-[#5a5a72]">{item.date}</span>
+                              <button
+                                onClick={(e) => deleteHistoryItem(item.id, e)}
+                                className="text-[9px] text-[#5a5a72] hover:text-red-400 p-0.5 rounded cursor-pointer transition-colors border-none bg-transparent"
+                                title="Xóa lịch sử"
+                              >
+                                ✕
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {/* Visual Deconstruction Reference Lab */}
+              <div className="mt-6">
+                <VisualDeconstructionLab defaultPreset="portrait" />
+              </div>
             </div>
 
             {/* Right Col: Critique Output Dashboard (5 Cols) */}
@@ -1370,29 +1577,61 @@ ${bads.length > 0
                   </pre>
                 </div>
 
-                <div className="flex gap-3 justify-end">
+                <div className="flex flex-wrap gap-2 justify-end">
                   <button
                     onClick={copyPromptToClipboard}
-                    className="px-4 py-2 bg-white/[0.04] hover:bg-white/10 border border-white/10 text-white font-semibold text-xs rounded-lg transition-colors cursor-pointer"
+                    className="px-3 py-1.5 bg-white/[0.04] hover:bg-white/10 border border-white/10 text-white font-semibold text-[10px] rounded-lg transition-all cursor-pointer active:scale-[0.98]"
                   >
-                    {copiedPrompt ? '✓ Đã sao chép!' : 'Sao chép JSON'}
+                    {copiedPrompt ? '✓ Đã sao chép!' : 'Sao chép Full JSON'}
                   </button>
                   <button
                     onClick={() => {
                       try {
                         const obj = JSON.parse(generatedPromptJson);
-                        const p = obj.optimized_generative_prompts?.positive_prompt_raw 
-                          || obj.generative_ai_prompt_builder?.optimized_positive_prompt 
+                        const p = obj.optimized_generative_prompts?.gpt_image_prompt 
+                          || obj.optimized_generative_prompts?.positive_prompt_raw 
                           || "";
                         navigator.clipboard.writeText(p);
-                        alert('Đã sao chép prompt AI tối ưu vào Clipboard!');
+                        alert('Đã sao chép prompt GPT Image 2 (Thực tế) vào Clipboard!');
                       } catch (err) {
                         alert('Lỗi sao chép prompt.');
                       }
                     }}
-                    className="px-4 py-2 bg-[#a94338] hover:bg-red-700 text-white font-semibold text-xs rounded-lg transition-colors cursor-pointer border-none"
+                    className="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-[10px] rounded-lg transition-all cursor-pointer border-none active:scale-[0.98]"
                   >
-                    Sao chép Prompt AI
+                    Sao chép GPT Image 2
+                  </button>
+                  <button
+                    onClick={() => {
+                      try {
+                        const obj = JSON.parse(generatedPromptJson);
+                        const p = obj.optimized_generative_prompts?.midjourney_prompt 
+                          || "";
+                        navigator.clipboard.writeText(p);
+                        alert('Đã sao chép prompt Midjourney (Nghệ thuật) vào Clipboard!');
+                      } catch (err) {
+                        alert('Lỗi sao chép prompt.');
+                      }
+                    }}
+                    className="px-3 py-1.5 bg-purple-600 hover:bg-purple-700 text-white font-semibold text-[10px] rounded-lg transition-all cursor-pointer border-none active:scale-[0.98]"
+                  >
+                    Sao chép Midjourney
+                  </button>
+                  <button
+                    onClick={() => {
+                      try {
+                        const obj = JSON.parse(generatedPromptJson);
+                        const p = obj.optimized_generative_prompts?.nanobana_prompt 
+                          || "";
+                        navigator.clipboard.writeText(p);
+                        alert('Đã sao chép prompt Nanobana 2 vào Clipboard!');
+                      } catch (err) {
+                        alert('Lỗi sao chép prompt.');
+                      }
+                    }}
+                    className="px-3 py-1.5 bg-[#a94338] hover:bg-red-700 text-white font-semibold text-[10px] rounded-lg transition-all cursor-pointer border-none active:scale-[0.98]"
+                  >
+                    Sao chép Nanobana 2
                   </button>
                 </div>
               </div>

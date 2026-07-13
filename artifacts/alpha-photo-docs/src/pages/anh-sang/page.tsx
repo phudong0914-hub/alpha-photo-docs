@@ -1,6 +1,8 @@
 
 
 import { useState, useEffect } from 'react';
+import { LessonVideoPlayer } from '@/components/lesson-video-player';
+import { lessonVideos } from '@/lib/video-config';
 import { Link } from 'wouter';
 import {
   ChevronRight,
@@ -119,6 +121,9 @@ export default function AnhSangPage() {
             loading="eager"
           />
         </div>
+
+        {/* Video bài học */}
+        <LessonVideoPlayer video={lessonVideos['/anh-sang']} />
 
         {/* Opening Quote */}
         <div className="quote-block">

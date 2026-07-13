@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { LessonVideoPlayer } from '@/components/lesson-video-player';
+import { lessonVideos } from '@/lib/video-config';
 import { Link } from 'wouter';
 import { HugeiconsIcon } from '@hugeicons/react';
 import {
@@ -341,6 +343,11 @@ export default function TinhThongNhatPage() {
 
           </div>
         </header>
+
+        {/* Video bài học */}
+        <div className="max-w-7xl mx-auto px-6 pt-12">
+          <LessonVideoPlayer video={lessonVideos['/tinh-thong-nhat']} />
+        </div>
 
         {/* SECTION I: MANIFESTO */}
         <section id="manifesto" className="max-w-7xl mx-auto px-6 py-20 border-b border-white/[0.06]">

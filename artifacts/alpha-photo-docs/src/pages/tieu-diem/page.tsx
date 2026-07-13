@@ -24,6 +24,7 @@ import {
   Scan,
 } from 'lucide-react';
 import DocsLayout from '@/components/docs-layout';
+import { DofSimulator } from '@/components/dof-simulator';
 
 /* ------------------------------------------------------------------ */
 /*  TOC Data                                                          */
@@ -260,6 +261,9 @@ export default function TieuDiemPage() {
         <p>
           Độ sâu trường ảnh (Depth of Field — DOF) là phạm vi khoảng cách mà trong đó chủ thể xuất hiện sắc nét chấp nhận được trong bức ảnh. Nó là khái niệm trung tâm nhất của nhiếp ảnh kỹ thuật — và cũng là công cụ sáng tạo mạnh mẽ nhất.
         </p>
+
+        {/* Premium DoF Simulator Widget */}
+        <DofSimulator />
 
         <hr className="doc-divider" />
 

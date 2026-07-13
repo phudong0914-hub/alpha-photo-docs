@@ -1,6 +1,8 @@
 
 
 import { useState, useEffect } from 'react';
+import { LessonVideoPlayer } from '@/components/lesson-video-player';
+import { lessonVideos } from '@/lib/video-config';
 import { Link } from 'wouter';
 import {
   ChevronRight,
@@ -19,6 +21,7 @@ import {
   Wind,
 } from 'lucide-react';
 import DocsLayout from '@/components/docs-layout';
+import { VisualDeconstructionLab } from '@/components/visual-deconstruction-lab';
 
 /* ------------------------------------------------------------------ */
 /*  TOC Data                                                          */
@@ -120,6 +123,9 @@ export default function KhongGianPage() {
             loading="eager"
           />
         </div>
+
+        {/* Video bài học */}
+        <LessonVideoPlayer video={lessonVideos['/khong-gian']} />
 
         {/* Opening Quote */}
         <div className="quote-block">
@@ -492,6 +498,9 @@ export default function KhongGianPage() {
         </div>
 
         {/* ============================================================ */}
+        {/* Visual Deconstruction Lab - Dunes Preset */}
+        <VisualDeconstructionLab defaultPreset="dunes" />
+
         {/*  SECTION IV                                                   */}
         {/* ============================================================ */}
         <h2 id="sec-4" className="scroll-mt-20">

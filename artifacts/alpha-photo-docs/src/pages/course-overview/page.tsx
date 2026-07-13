@@ -10,6 +10,7 @@ import {
   Sparkles,
 } from 'lucide-react';
 import DocsLayout from '@/components/docs-layout';
+import { CourseTree } from '@/components/course-tree';
 
 const tocSections = [
   { id: 'hanh-trinh', label: 'Hành trình học', level: 1 },
@@ -129,24 +130,8 @@ export default function CourseOverviewPage() {
             </div>
             <span>19 bài · đọc theo nhịp riêng</span>
           </div>
-          <div className="course-chapter-list">
-            {chapters.map((chapter) => {
-              const Icon = chapter.icon;
-              return (
-                <Link href={chapter.href} className="course-chapter" key={chapter.number}>
-                  <span className="course-chapter-number">{chapter.number}</span>
-                  <span className="course-chapter-icon" style={{ color: chapter.color }}>
-                    <Icon size={20} />
-                  </span>
-                  <span className="course-chapter-copy">
-                    <strong>{chapter.title}</strong>
-                    <small>{chapter.description}</small>
-                  </span>
-                  <span className="course-chapter-lessons">{chapter.lessons}</span>
-                  <ArrowRight size={18} />
-                </Link>
-              );
-            })}
+          <div className="mt-8">
+            <CourseTree variant="embed" />
           </div>
         </section>
 

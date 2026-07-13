@@ -34,7 +34,10 @@ import {
   Gauge,
   Diamond,
   Cpu,
+  Compass,
 } from 'lucide-react';
+import { CourseTree } from './course-tree';
+import LessonInteractiveTools from './lesson-interactive-tools';
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -365,6 +368,7 @@ export default function DocsLayout({ children, tocSections }: DocsLayoutProps) {
   const [pathname] = useLocation();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [isRoadmapOpen, setIsRoadmapOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedGroups, setExpandedGroups] = useState<Record<string, boolean>>({
     'nen-tang': true,
@@ -702,8 +706,24 @@ export default function DocsLayout({ children, tocSections }: DocsLayoutProps) {
               <span className="font-semibold text-[#e8e8f0] text-sm tracking-tight hidden sm:inline group-hover:text-[#50e4ed] transition-colors duration-300">
                 Alpha Photography
               </span>
-              <span className="text-[11px] text-[#ffcb6b] font-serif italic tracking-widest hidden sm:inline mt-1 leading-none pl-0.5 font-medium drop-shadow-[0_0_8px_rgba(255,203,107,0.3)] group-hover:text-white transition-colors duration-300">
-                Trungvt
+              <span
+                className="hidden sm:inline mt-1.5 leading-none pl-0.5"
+                style={{
+                  fontFamily: "'Cinzel', 'Cormorant Garamond', 'Didot', 'Times New Roman', serif",
+                  fontWeight: 900,
+                  fontStyle: "normal",
+                  fontSize: "12px",
+                  letterSpacing: "0.24em",
+                  background: "linear-gradient(135deg, #ffe58f 0%, #d4af37 50%, #b8882a 100%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                  filter: "drop-shadow(0 0 8px rgba(255, 215, 100, 0.45)) drop-shadow(0 1.5px 3px rgba(0,0,0,0.9))",
+                  textShadow: "none",
+                  textTransform: "uppercase",
+                }}
+              >
+                TRUNGVT
               </span>
             </div>
           </Link>
@@ -803,7 +823,7 @@ export default function DocsLayout({ children, tocSections }: DocsLayoutProps) {
               {/* Mobile sidebar content */}
               <div className="flex-1 overflow-y-auto sidebar-scroll pt-3 pb-4">
                 {/* Home link */}
-                <div className="px-3 pb-2">
+                <div className="px-3 pb-2 flex flex-col gap-1">
                   <Link
                     href="/khoa-hoc"
                     className={`nav-item flex items-center gap-2.5 px-3 py-2 rounded-md text-sm ${isActive('/khoa-hoc') ? 'active' : 'text-[#9a9ab0]'}`}
@@ -812,6 +832,16 @@ export default function DocsLayout({ children, tocSections }: DocsLayoutProps) {
                     <Home size={15} className="text-[#5a5a72]" />
                     Tổng quan khóa học
                   </Link>
+                  <button
+                    onClick={() => {
+                      setSidebarOpen(false);
+                      setIsRoadmapOpen(true);
+                    }}
+                    className="w-full nav-item flex items-center gap-2.5 px-3 py-2 rounded-md text-sm text-[#9a9ab0] hover:text-white transition-colors cursor-pointer text-left bg-transparent border-none"
+                  >
+                    <Compass size={15} className="text-[#7c8aff] flex-shrink-0" />
+                    Sơ đồ lộ trình
+                  </button>
                 </div>
 
                 {navGroups.map((group) => (
@@ -924,7 +954,7 @@ export default function DocsLayout({ children, tocSections }: DocsLayoutProps) {
         }}
       >
         {/* Home */}
-        <div className="px-3 pt-4 pb-2">
+        <div className="px-3 pt-4 pb-2 flex flex-col gap-1">
           <Link
             href="/khoa-hoc"
             className={`nav-item flex items-center gap-2.5 px-3 py-2 rounded-md text-sm ${isActive('/khoa-hoc') ? 'active' : 'text-[#9a9ab0]'}`}
@@ -932,9 +962,16 @@ export default function DocsLayout({ children, tocSections }: DocsLayoutProps) {
             <Home size={15} className="text-[#5a5a72]" />
             Tổng quan khóa học
           </Link>
+          <button
+            onClick={() => setIsRoadmapOpen(true)}
+            className="w-full nav-item flex items-center gap-2.5 px-3 py-2 rounded-md text-sm text-[#9a9ab0] hover:text-white transition-colors cursor-pointer text-left bg-transparent border-none"
+          >
+            <Compass size={15} className="text-[#7c8aff] flex-shrink-0" />
+            Sơ đồ lộ trình
+          </button>
           <Link
             href="/tong-ket"
-            className={`nav-item flex items-center gap-2.5 px-3 py-2 rounded-md text-sm mt-1 ${isActive('/tong-ket') ? 'active' : 'text-[#9a9ab0]'}`}
+            className={`nav-item flex items-center gap-2.5 px-3 py-2 rounded-md text-sm ${isActive('/tong-ket') ? 'active' : 'text-[#9a9ab0]'}`}
           >
             <Sparkles size={15} className="text-[#fb7185]" />
             Bản đồ tổng kết
@@ -1084,6 +1121,7 @@ export default function DocsLayout({ children, tocSections }: DocsLayoutProps) {
               exit="exit"
             >
               {children}
+              <LessonInteractiveTools pathname={pathname} />
             </motion.main>
           </AnimatePresence>
 
@@ -1444,6 +1482,72 @@ export default function DocsLayout({ children, tocSections }: DocsLayoutProps) {
                   <kbd className="px-1 py-0.5 rounded bg-[rgba(5,5,8,0.6)] border border-[rgba(255,255,255,0.06)] font-mono text-[9px]">esc</kbd>
                   Đóng
                 </span>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* ==================== ROADMAP MODAL ==================== */}
+      <AnimatePresence>
+        {isRoadmapOpen && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            onClick={() => setIsRoadmapOpen(false)}
+          >
+            {/* Blurred background overlay */}
+            <motion.div
+              className="absolute inset-0 bg-black/80"
+              style={{ backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)' }}
+            />
+
+            {/* Modal Box */}
+            <motion.div
+              className="relative w-full max-w-4xl h-[85vh] flex flex-col overflow-hidden"
+              style={{
+                background: 'rgba(10, 10, 16, 0.96)',
+                backdropFilter: 'blur(30px)',
+                WebkitBackdropFilter: 'blur(30px)',
+                border: '1px solid rgba(255,255,255,0.08)',
+                borderRadius: '24px',
+                boxShadow: '0 24px 80px rgba(0,0,0,0.6), 0 0 40px rgba(124,138,255,0.04)',
+              }}
+              initial={{ opacity: 0, scale: 0.95, y: 15 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 15 }}
+              transition={{ type: 'spring', stiffness: 350, damping: 30 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Modal Header */}
+              <div className="flex items-center justify-between px-6 py-5 border-b border-[rgba(255,255,255,0.06)] bg-white/[0.01]">
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-xl bg-[#7c8aff]/10 flex items-center justify-center text-[#7c8aff]">
+                    <Compass size={18} />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-serif font-semibold text-slate-100 leading-tight">
+                      Sơ đồ lộ trình học tập
+                    </h3>
+                    <p className="text-xs text-[#5a5a72] mt-0.5 font-sans">
+                      19 bài học & 5 chặng phát triển tư duy hình ảnh
+                    </p>
+                  </div>
+                </div>
+                <button
+                  onClick={() => setIsRoadmapOpen(false)}
+                  className="p-1.5 rounded-lg hover:bg-white/[0.04] text-[#5a5a72] hover:text-white transition-colors cursor-pointer bg-transparent border-none"
+                >
+                  <X size={18} />
+                </button>
+              </div>
+
+              {/* Modal Body */}
+              <div className="flex-1 overflow-y-auto p-6 md:p-8 sidebar-scroll">
+                <CourseTree variant="modal" onNodeClick={() => setIsRoadmapOpen(false)} />
               </div>
             </motion.div>
           </motion.div>

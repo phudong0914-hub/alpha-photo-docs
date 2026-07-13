@@ -1,6 +1,8 @@
 
 
 import { useState, useEffect } from 'react';
+import { LessonVideoPlayer } from '@/components/lesson-video-player';
+import { lessonVideos } from '@/lib/video-config';
 import { Link } from 'wouter';
 import {
   ChevronRight,
@@ -18,6 +20,7 @@ import {
   Layers,
 } from 'lucide-react';
 import DocsLayout from '@/components/docs-layout';
+import { VisualDeconstructionLab } from '@/components/visual-deconstruction-lab';
 
 /* ------------------------------------------------------------------ */
 /*  TOC Data                                                          */
@@ -117,6 +120,9 @@ export default function HinhDangPage() {
             loading="eager"
           />
         </div>
+
+        {/* Video bài học */}
+        <LessonVideoPlayer video={lessonVideos['/hinh-dang']} />
 
         {/* Opening Quote */}
         <div className="quote-block">
@@ -379,6 +385,9 @@ export default function HinhDangPage() {
             Nheo mắt nhìn vào ảnh của bạn. Nếu bạn chỉ thấy 2-3 hình dạng lớn với trọng lượng thị giác rõ ràng — bố cục tốt. Nếu bạn thấy mảng xám hỗn độn không có cấu trúc — cần đơn giản hóa. Bài tập này giúp bạn tư duy bằng hình dạng thay vì chi tiết.
           </p>
         </div>
+
+        {/* Visual Deconstruction Lab - Portrait Preset */}
+        <VisualDeconstructionLab defaultPreset="portrait" />
 
         <hr className="doc-divider" />
 

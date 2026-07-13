@@ -1,0 +1,101 @@
+# BÀI 1 — SỨC MẠNH CỦA HÌNH ẢNH
+
+## 📄 NỘI DUNG
+
+**KHÓA HỌC NGÔN NGỮ THỊ GIÁC — BÀI 1: SỨC MẠNH CỦA HÌNH ẢNH**
+
+*Nền tảng hình ảnh · Khóa học Alpha Photography by Trungvt*
+
+---
+
+### PHẦN I: ĐỊNH NGHĨA VÀ BẢN CHẤT THỰC SỰ CỦA HÌNH ẢNH
+
+**1. Hình ảnh là gì?**
+
+Trước khi khai thác sức mạnh của hình ảnh, chúng ta cần trả lời một câu hỏi tưởng đơn giản nhưng lại là nền tảng: Hình ảnh thực chất là gì?
+
+Từ imago trong tiếng Latin mang nghĩa "bản sao" hay "phản ánh". Hình ảnh, ở mức căn bản nhất, là một sự sao chép thị giác của thực tại — nhưng không bao giờ là bản sao hoàn hảo.
+
+Định nghĩa cốt lõi: Hình ảnh là một sự biểu diễn thị giác được tạo ra thông qua việc sao chép có chọn lọc các đặc tính của đối tượng gốc, thông qua một trung gian (ánh sáng, mực, pixel) và một hệ thống quy ước (góc nhìn, khung hình, tỷ lệ).
+
+**Hình ảnh vs. Thực tế — Thông tin bị lược bỏ:**
+
+Khi chuyển từ thực tại 3 chiều sang hình ảnh 2 chiều, một lượng lớn thông tin bị mất:
+- Độ sâu (Depth) bị nén thành các tương phản và góc nghiêng
+- Kết cấu (Texture) chỉ còn lại gợi ý qua ánh sáng và bóng
+- Mùi hương (Smell) hoàn toàn mất
+- Âm thanh (Sound) hoàn toàn mất
+- Chuyển động (Movement) bị đóng băng hoặc giả lập
+
+Chính sự mất mát này lại là nguồn gốc của sức mạnh: hình ảnh buộc người xem phải tự điền vào khoảng trống, kích thích trí tưởng tượng và cảm xúc.
+
+Sự giống nhau chọn lọc: Mỗi loại hình ảnh ưu tiên một khía cạnh khác nhau — Nhiếp ảnh ưu tiên ánh sáng và khoảnh khắc, Hội họa ưu tiên màu sắc và cảm xúc, Đồ họa ưu tiên hình dạng và thông tin.
+
+**2. Tính phản trắc**
+
+Cùng một sự kiện, hai nhiếp ảnh gia có thể tạo ra hai hình ảnh hoàn toàn khác nhau. Hình ảnh không phản ánh thực tại — nó phản trắc thực tại qua một chủ thể. Năm yếu tố quyết định: Góc nhìn, Thời điểm, Ánh sáng, Khung hình, Hậu kỳ.
+
+"Hình ảnh không nói dối" là một quan niệm sai lầm. Hình ảnh luôn nói một phần sự thật — và sự thật nào được nói là quyết định của người cầm máy.
+
+**3. Giới hạn và khoảng trống**
+
+Hình ảnh có những giới hạn cố hữu mà người nhiếp ảnh phải nhận thức rõ: Thời gian và ngữ cảnh bị tách rời, Ý đồ không thể hiện trực tiếp, Nhân quả chỉ ghi nhận kết quả, Tỷ lệ thực khó đánh giá. Nhận thức được các giới hạn này giúp nhiếp ảnh gia chủ động bù đắp hoặc tận dụng khoảng trống để tạo hình ảnh có sức mạnh truyền tải cao hơn.
+
+---
+
+### PHẦN II: TÁC ĐỘNG CỦA HÌNH ẢNH LÊN HỆ THẦN KINH
+
+**1. Đi thẳng vào tiềm thức**
+
+Hình ảnh không cần sự cho phép của ý thức để tác động. Não bộ xử lý hình ảnh qua hai đường dẫn thần kinh:
+
+Fast Pathway (12-20ms): Thông tin thị giác đi thẳng từ thị giác sang hạch hạnh nhân (amygdala), kích hoạt phản ứng cảm xúc tức thì trước khi bạn kịp nhận thức.
+
+Slow Pathway (~150ms): Thông tin đi qua vỏ não thị giác (visual cortex), được phân tích chi tiết rồi mới chuyển đến amygdala. Đây là đường dẫn nhận thức có chủ đích.
+
+Nghiên cứu MIT (2014) cho thấy não có thể nhận diện một cảnh tượng chỉ trong 13 milliseconds — nhanh hơn cả thời gian bạn chớp mắt.
+
+**2. Khả năng khơi gợi cảm xúc**
+
+Các yếu tố thị giác kích hoạt cảm xúc cụ thể: Màu đỏ/cam gợi sự cấp bách và nguy hiểm, Màu xanh lam gợi sự tĩnh lặng và tin cậy, Tông tối (Low-key) gợi bí ẩn và u buồn, Ánh sáng tự nhiên gợi sự chân thực và ấm áp, Đường chéo gợi sự bất ổn và chuyển động, Khoảng trống gợi sự cô đơn và tự do.
+
+**3. Trọng lực thị giác — Visual Hotspots**
+
+Mắt người bị thu hút bởi các điểm nóng thị giác: Khuôn mặt và mắt (Vùng FFA — Fusiform Face Area), Vùng sáng nhất trong khung hình, Tương phản cao tại các cạnh rõ ràng, Chuyển động và hướng nhìn của nhân vật, Kích thước tương đối — đối tượng lớn hơn nhận nhiều chú ý hơn.
+
+---
+
+### PHẦN III: ỨNG DỤNG SỨC MẠNH CỦA HÌNH ẢNH
+
+**1. Kể chuyện (Storytelling)**
+
+Mỗi hình ảnh có thể kể câu chuyện ở nhiều tầng:
+- Layer 1 — What: Cái gì đang xảy ra? (Lớp bề mặt — dễ đọc nhất)
+- Layer 2 — Where/When: Ở đâu, khi nào? (Lớp ngữ cảnh — yêu cầu kiến thức nền)
+- Layer 3 — Why it matters: Tại sao quan trọng? (Lớp ý nghĩa — tạo ra sức mạnh thực sự)
+
+Ảnh Nick Ut "Napalm Girl" (1972) là ví dụ kinh điển về ảnh đơn chứa đủ 3 tầng.
+
+**2. Hiệu ứng Kuleshov**
+
+Lev Kuleshov (1920s) chứng minh: ý nghĩa của hình ảnh không nằm trong bản thân hình ảnh — mà trong mối quan hệ giữa các hình ảnh. Khi đặt hai hình ảnh đối lập cạnh nhau (Tương phản), lặp lại motif (Tương đồng), sắp xếp trình tự (Nhân quả), hoặc đẩy cảm xúc dần lên (Leo thang) — ý nghĩa hoàn toàn thay đổi.
+
+**3. Nghệ thuật chắt lọc**
+
+Sức mạnh của hình ảnh không nằm ở việc thêm vào — mà nằm ở việc lược bỏ: DOF mỏng (f/1.4-2.8) cô lập chủ thể, Leading Lines dẫn mắt, Frame in Frame tạo khung thứ hai, Negative Space tạo không gian thở.
+
+---
+
+### PHẦN IV — ELITE: TRIẾT HỌC THỊ GIÁC
+
+**1. Semiotics — Ba tầng ý nghĩa**
+
+Từ Ferdinand de Saussure và Charles Sanders Peirce: Denotation (mô tả thuần túy những gì có trong ảnh), Connotation (ý nghĩa văn hóa và cảm xúc được gợi ra), Myth/Ideology (những quan niệm xã hội ẩn chứa được chuẩn hóa).
+
+**2. Roland Barthes — Studium và Punctum**
+
+Trong tác phẩm "Camera Lucida" (1980): Studium là sự quan tâm chung về bối cảnh văn hóa, xã hội, lịch sử. Punctum là chi tiết nhỏ "đâm thủng" người xem, gây ra phản ứng cảm xúc cá nhân mãnh liệt không giải thích được.
+
+**3. Post-truth và Visual Literacy**
+
+Trong kỷ nguyên AI và deepfake, sức mạnh của hình ảnh trở thành con dao hai lưỡi. Visual Literacy — khả năng đọc, phân tích và tư duy phê phán về hình ảnh — là kỹ năng sinh tồn của thế kỷ 21.

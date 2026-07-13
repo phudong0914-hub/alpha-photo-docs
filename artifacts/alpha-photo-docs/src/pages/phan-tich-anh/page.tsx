@@ -538,7 +538,7 @@ export default function PhantichAnhPage() {
     setCritiqueReport(null);
 
     // Scenario A: Real Gemini API critique
-    if (apiKey.trim() && apiKey !== 'AIzaSyAcyWnzMrXZSD9XrJAbCUOAl2Ikklovcl8') {
+    if (apiKey.trim()) {
       try {
         setAnalysisProgress('Đang tải tệp ảnh lên và mã hóa dữ liệu...');
         await new Promise(r => setTimeout(r, 800));

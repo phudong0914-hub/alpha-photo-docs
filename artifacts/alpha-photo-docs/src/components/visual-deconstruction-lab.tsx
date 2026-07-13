@@ -14,11 +14,17 @@ interface DeconstructionPreset {
 }
 
 interface VisualDeconstructionLabProps {
-  defaultPreset?: 'portrait' | 'dunes';
+  defaultPreset?: 'portrait' | 'dunes' | 'custom';
+  customImageSrc?: string | null;
+  aiPromptData?: any;
 }
 
-export function VisualDeconstructionLab({ defaultPreset = 'portrait' }: VisualDeconstructionLabProps) {
-  const [presetId, setPresetId] = useState<string>(defaultPreset);
+export function VisualDeconstructionLab({
+  defaultPreset = 'portrait',
+  customImageSrc = null,
+  aiPromptData = null
+}: VisualDeconstructionLabProps) {
+  const [presetId, setPresetId] = useState<string>(customImageSrc ? 'custom' : defaultPreset);
   const [viewMode, setViewMode] = useState<'original' | 'vector' | 'layers'>('layers');
   const [layerSpread, setLayerSpread] = useState<number>(60); // translation Z distance in px
   const [rotateX, setRotateX] = useState<number>(12); // initial oblique angles
@@ -26,6 +32,15 @@ export function VisualDeconstructionLab({ defaultPreset = 'portrait' }: VisualDe
   const [isHovering, setIsHovering] = useState<boolean>(false);
   
   const containerRef = useRef<HTMLDivElement>(null);
+
+  // Auto-switch to custom preset when a custom image is uploaded
+  useEffect(() => {
+    if (customImageSrc) {
+      setPresetId('custom');
+    } else {
+      setPresetId(defaultPreset);
+    }
+  }, [customImageSrc, defaultPreset]);
 
   // Mouse move handler for 3D rotation parallax
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -198,7 +213,48 @@ export function VisualDeconstructionLab({ defaultPreset = 'portrait' }: VisualDe
     }
   };
 
-  const currentPreset = presets[presetId];
+  if (customImageSrc) {
+    presets.custom = {
+      id: 'custom',
+      title: 'Ảnh tự tải lên',
+      subtitle: 'Bóc tách lớp 3D Parallax & Định vị AI',
+      desc: aiPromptData
+        ? `Độ phân rã dựa trên phân tích hình ảnh thực tế của bạn: "${aiPromptData.subject || 'Ảnh tự chụp'}".`
+        : 'Hình ảnh thực tế đang được nạp lên light table. Bấm "AI Phân tích" để AI bóc tách thông tin chiều sâu.',
+      bgGradient: 'linear-gradient(135deg, #050508 0%, #0d0d14 50%, #1c1c30 100%)',
+      subjectContent: (
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <img
+            src={customImageSrc}
+            className="w-full h-full object-contain filter drop-shadow(0 15px 35px rgba(0,0,0,0.8))"
+            alt="Subject"
+          />
+        </div>
+      ),
+      foregroundContent: (
+        <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-30">
+          <img
+            src={customImageSrc}
+            className="w-full h-full object-contain scale-110 filter blur-[15px] saturate-150"
+            alt="Foreground"
+          />
+        </div>
+      ),
+      vectorSvg: (
+        <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <line x1="33.3" y1="0" x2="33.3" y2="100" stroke="rgba(56, 189, 248, 0.3)" strokeWidth="0.5" strokeDasharray="2,2" />
+          <line x1="66.6" y1="0" x2="66.6" y2="100" stroke="rgba(56, 189, 248, 0.3)" strokeWidth="0.5" strokeDasharray="2,2" />
+          <line x1="0" y1="33.3" x2="100" y2="33.3" stroke="rgba(56, 189, 248, 0.3)" strokeWidth="0.5" strokeDasharray="2,2" />
+          <line x1="0" y1="66.6" x2="100" y2="66.6" stroke="rgba(56, 189, 248, 0.3)" strokeWidth="0.5" strokeDasharray="2,2" />
+          <circle cx="66.6" cy="33.3" r="5" fill="none" stroke="#ffe58f" strokeWidth="0.75" className="animate-ping" style={{ animationDuration: '3s' }} />
+          <circle cx="66.6" cy="33.3" r="2.5" fill="#ffe58f" />
+          <text x="66.6" y="27" fill="#ffe58f" fontSize="3.5" fontFamily="monospace" textAnchor="middle">AI FOCAL POINT</text>
+        </svg>
+      )
+    };
+  }
+
+  const currentPreset = presets[presetId] || presets.portrait;
 
   // Reset view rotation when changing modes
   useEffect(() => {
@@ -455,9 +511,23 @@ export function VisualDeconstructionLab({ defaultPreset = 'portrait' }: VisualDe
           {/* Deconstruction theory info */}
           <div className="p-3 rounded-lg bg-black/20 border border-white/[0.03] text-[10px] leading-relaxed text-[#5a5a72]">
             <span className="font-semibold text-slate-400 block mb-1">💡 GIÁM ĐỐC SÁNG TẠO ĐÁNH GIÁ:</span>
-            {viewMode === 'original' && 'Chế độ xem thông thường. Toàn bộ các lớp tiền cảnh, chủ thể, hậu cảnh chồng khít tạo ảo giác 2D phẳng hoàn thiện.'}
-            {viewMode === 'vector' && 'Lưới vàng neon hiển thị điểm giao thoa bố cục. Hãy chú ý cách mắt nhân vật hoặc mặt trời hoàng hôn được đặt chuẩn xác tại các điểm giao nhau 1/3 (Focal Points) và các đường chéo dẫn hướng.'}
-            {viewMode === 'layers' && 'Khi kéo thanh trượt, bạn phân rã chiều sâu quang học. Lớp tiền cảnh (bokeh/cỏ) trượt nhanh nhất, lớp chủ thể đứng yên, lớp hậu cảnh lùi sâu. Parallax giúp não bộ cảm nhận khoảng cách thật.'}
+            {presetId === 'custom' ? (
+              aiPromptData ? (
+                <div className="space-y-1.5 text-slate-300">
+                  <div><strong className="text-[#ffe58f]">Chủ thể chính (Midground):</strong> {aiPromptData.reconstruction_parameters?.subject_detailing?.core_focus || 'Đang bóc tách...'}</div>
+                  <div><strong className="text-emerald-400">Tiền cảnh (Foreground):</strong> {aiPromptData.reconstruction_parameters?.environment_and_atmosphere?.framing_foreground || 'Không phát hiện tiền cảnh đặc biệt'}</div>
+                  <div><strong className="text-[#38bdf8]">Hậu cảnh (Background):</strong> {aiPromptData.reconstruction_parameters?.environment_and_atmosphere?.background_setting || 'Đang bóc tách...'}</div>
+                </div>
+              ) : (
+                'Vui lòng tải ảnh lên ở mục phía trên và nhấn nút "AI Phân tích" để AI bóc tách chi tiết chủ thể, tiền cảnh và hậu cảnh hiển thị tại đây.'
+              )
+            ) : (
+              <>
+                {viewMode === 'original' && 'Chế độ xem thông thường. Toàn bộ các lớp tiền cảnh, chủ thể, hậu cảnh chồng khít tạo ảo giác 2D phẳng hoàn thiện.'}
+                {viewMode === 'vector' && 'Lưới vàng neon hiển thị điểm giao thoa bố cục. Hãy chú ý cách mắt nhân vật hoặc mặt trời hoàng hôn được đặt chuẩn xác tại các điểm giao nhau 1/3 (Focal Points) và các đường chéo dẫn hướng.'}
+                {viewMode === 'layers' && 'Khi kéo thanh trượt, bạn phân rã chiều sâu quang học. Lớp tiền cảnh (bokeh/cỏ) trượt nhanh nhất, lớp chủ thể đứng yên, lớp hậu cảnh lùi sâu. Parallax giúp não bộ cảm nhận khoảng cách thật.'}
+              </>
+            )}
           </div>
 
         </div>

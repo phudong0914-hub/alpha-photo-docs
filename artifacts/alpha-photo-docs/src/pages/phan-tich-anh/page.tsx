@@ -1340,7 +1340,11 @@ ${bads.length > 0
 
               {/* Visual Deconstruction Reference Lab */}
               <div className="mt-6">
-                <VisualDeconstructionLab defaultPreset="portrait" />
+                <VisualDeconstructionLab 
+                  defaultPreset="portrait" 
+                  customImageSrc={imageSrc}
+                  aiPromptData={aiPromptData}
+                />
               </div>
             </div>
 

@@ -25,6 +25,8 @@ import {
 } from 'lucide-react';
 import DocsLayout from '@/components/docs-layout';
 import { DofSimulator } from '@/components/dof-simulator';
+import { lessonVideos } from '@/lib/video-config';
+import { LessonVideoPlayer } from '@/components/lesson-video-player';
 
 /* ------------------------------------------------------------------ */
 /*  TOC Data                                                          */
@@ -133,6 +135,9 @@ export default function TieuDiemPage() {
             loading="eager"
           />
         </div>
+
+        {/* Video bài học */}
+        <LessonVideoPlayer video={lessonVideos['/tieu-diem']} />
 
         {/* Opening Quote */}
         <div className="quote-block">

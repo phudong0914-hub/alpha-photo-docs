@@ -35,6 +35,8 @@ import {
   Diamond,
   Cpu,
   Compass,
+  Mail,
+  Youtube,
 } from 'lucide-react';
 import { CourseTree } from './course-tree';
 import LessonInteractiveTools from './lesson-interactive-tools';
@@ -1099,6 +1101,42 @@ export default function DocsLayout({ children, tocSections }: DocsLayoutProps) {
                 </span>
               </div>
             ))}
+          </div>
+
+          {/* Contact & Social Badges */}
+          <div className="mt-5 pt-4 border-t border-[rgba(255,255,255,0.04)] space-y-2.5">
+            <div className="text-[10px] text-[#5a5a72] uppercase tracking-widest pl-0.5 font-semibold">
+              Liên hệ tác giả
+            </div>
+            <div className="flex items-center gap-2">
+              <a
+                href="mailto:trungvtco@gmail.com"
+                className="flex-1 flex items-center justify-center gap-1 py-1.5 rounded-lg bg-[#7c8aff]/10 hover:bg-[#7c8aff]/20 text-[#7c8aff] border border-[#7c8aff]/20 transition-all duration-300 hover:scale-[1.03]"
+                title="Gửi Email"
+              >
+                <Mail size={12} />
+                <span className="font-bold text-[9px] tracking-wide">EMAIL</span>
+              </a>
+              <a
+                href="https://zalo.me/0836384168"
+                target="_blank"
+                rel="noreferrer"
+                className="flex-1 flex items-center justify-center gap-1 py-1.5 rounded-lg bg-[#0068ff]/10 hover:bg-[#0068ff]/20 text-[#0068ff] border border-[#0068ff]/20 transition-all duration-300 hover:scale-[1.03]"
+                title="Nhắn Zalo"
+              >
+                <span className="font-black text-[9px] tracking-wide">ZALO</span>
+              </a>
+              <a
+                href="https://www.youtube.com/@Trungvt-AI"
+                target="_blank"
+                rel="noreferrer"
+                className="flex-1 flex items-center justify-center gap-1 py-1.5 rounded-lg bg-[#fb7185]/10 hover:bg-[#fb7185]/20 text-[#fb7185] border border-[#fb7185]/20 transition-all duration-300 hover:scale-[1.03]"
+                title="Kênh YouTube"
+              >
+                <Youtube size={12} />
+                <span className="font-bold text-[9px] tracking-wide">YOUTUBE</span>
+              </a>
+            </div>
           </div>
         </div>
       </aside>

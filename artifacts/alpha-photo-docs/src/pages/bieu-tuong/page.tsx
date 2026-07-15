@@ -187,7 +187,7 @@ export default function BieuTuongPage() {
           {/* Background Image Wash */}
           <div className="absolute inset-0 z-0 opacity-35 filter grayscale contrast-125 saturate-50 pointer-events-none">
             <img
-              src="/hero-bieu-tuong.png"
+              src="/hero-bieu-tuong.webp"
               alt="Cultural Symbolism Background"
               className="w-full h-full object-cover object-center"
             />
@@ -236,7 +236,7 @@ export default function BieuTuongPage() {
               <div className="relative w-full max-w-[400px] aspect-square p-3 rounded-2xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-xl shadow-2xl">
                 <div className="relative w-full h-full rounded-xl overflow-hidden group">
                   <img
-                    src="/hero-bieu-tuong.png"
+                    src="/hero-bieu-tuong.webp"
                     alt="Cultural symbols"
                     className="w-full h-full object-cover filter saturate-50 contrast-115 brightness-90 group-hover:scale-105 transition-transform duration-[1200ms]"
                   />
@@ -311,7 +311,7 @@ export default function BieuTuongPage() {
               {/* Image with dynamic overlays */}
               <div className="relative w-full flex-grow rounded-xl overflow-hidden bg-black/40 flex items-center justify-center">
                 <img
-                  src="/hero-muc-dich.png"
+                  src="/hero-muc-dich.webp"
                   alt="Barthes Semiotics Illustration"
                   className={`w-full h-full object-cover transition-all duration-700 ${
                     activeLayer.id === 'punctum' ? 'brightness-50 saturate-50' : 

@@ -127,7 +127,7 @@ export default function MauSacPage() {
         {/* Hero image */}
         <div className="color-overview-hero rounded-xl overflow-hidden border border-[#1e1e2a] mb-8">
           <img
-            src="/hero-mau-sac.png"
+            src="/hero-mau-sac.webp"
             alt="Infographic tổng quan về màu sắc trong nhiếp ảnh: hue, saturation, luminance, bánh xe màu, hòa hợp màu và tâm lý màu sắc"
             className="w-full h-auto object-contain"
             loading="eager"

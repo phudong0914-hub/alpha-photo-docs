@@ -133,7 +133,7 @@ export default function BauKhongKhiPage() {
         {/* Hero image */}
         <div className="color-overview-hero rounded-xl overflow-hidden border border-[#1e1e2a] mb-8">
           <img
-            src="/hero-bau-khong-khi.png"
+            src="/hero-bau-khong-khi.webp"
             alt="Infographic tổng quan về bầu không khí và cảm xúc trong nhiếp ảnh: atmosphere, yếu tố thị giác, ví dụ phân tích và nghệ thuật cảm nhận"
             className="w-full h-auto object-contain"
             loading="eager"

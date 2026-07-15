@@ -129,7 +129,7 @@ export default function TieuDiemPage() {
         {/* Hero image */}
         <div className="color-overview-hero rounded-xl overflow-hidden border border-[#1e1e2a] mb-8">
           <img
-            src="/hero-tieu-diem.png"
+            src="/hero-tieu-diem.webp"
             alt="Infographic tổng quan về tiêu điểm và độ sâu trường ảnh: focus, DOF, khẩu độ, bokeh, hyperfocal và ứng dụng thực tế"
             className="w-full h-auto object-contain"
             loading="eager"

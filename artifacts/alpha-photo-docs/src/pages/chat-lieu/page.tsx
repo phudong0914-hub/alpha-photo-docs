@@ -131,7 +131,7 @@ export default function ChatLieuPage() {
         {/* Hero image */}
         <div className="color-overview-hero rounded-xl overflow-hidden border border-[#1e1e2a] mb-8">
           <img
-            src="/hero-chat-lieu.png"
+            src="/hero-chat-lieu.webp"
             alt="Infographic tổng quan về chất liệu bề mặt trong nhiếp ảnh: visual texture, tactile texture, ánh sáng, các loại chất liệu và hậu kỳ"
             className="w-full h-auto object-contain"
             loading="eager"

@@ -127,7 +127,7 @@ export default function GocChupPage() {
         {/* Hero image */}
         <div className="color-overview-hero rounded-xl overflow-hidden border border-[#1e1e2a] mb-8">
           <img
-            src="/hero-goc-chup.png"
+            src="/hero-goc-chup.webp"
             alt="Infographic tổng quan về góc chụp trong nhiếp ảnh: eye level, high angle, low angle, dutch angle, over the shoulder, framing và cảm xúc thị giác"
             className="w-full h-auto object-contain"
             loading="eager"

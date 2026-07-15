@@ -133,7 +133,7 @@ export default function AlphaDocsPage() {
         {/* Hero image */}
         <div className="rounded-xl overflow-hidden border border-[#1e1e2a] mb-8">
           <img
-            src="/hero-tab1.png"
+            src="/hero-tab1.webp"
             alt="Sức mạnh của hình ảnh - Ảnh minh họa"
             className="w-full h-auto object-cover"
             loading="eager"

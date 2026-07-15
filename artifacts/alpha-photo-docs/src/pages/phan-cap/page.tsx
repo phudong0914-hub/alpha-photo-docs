@@ -129,7 +129,7 @@ export default function PhanCapPage() {
         {/* Hero image */}
         <div className="color-overview-hero rounded-xl overflow-hidden border border-[#1e1e2a] mb-8">
           <img
-            src="/hero-phan-cap.png"
+            src="/hero-phan-cap.webp"
             alt="Infographic tổng quan về phân cấp và điểm nhấn trong nhiếp ảnh: dominant, subordinate, eye path, contrast, position, size, color, light và focus"
             className="w-full h-auto object-contain"
             loading="eager"

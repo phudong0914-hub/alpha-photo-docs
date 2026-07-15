@@ -124,7 +124,7 @@ const demoImages = [
   {
     id: 'demo-desert',
     title: 'Đường cong cồn cát Hoàng hôn',
-    src: '/hero-bieu-tuong.png',
+    src: '/hero-bieu-tuong.webp',
     scores: { bocuc: 92, anhsang: 85, mausac: 88, chatlieu: 75 },
     critique: `### BÁO CÁO PHÂN TÍCH TÁC PHẨM (DEMO DESERT)
 

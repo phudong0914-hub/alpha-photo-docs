@@ -112,7 +112,7 @@ export default function DuongNetPage() {
         {/* Hero image */}
         <div className="rounded-xl overflow-hidden border border-[#1e1e2a] mb-8">
           <img
-            src="/hero-duong-net.png"
+            src="/hero-duong-net.webp"
             alt="Đường nét cảm xúc - Ảnh minh họa"
             className="w-full h-auto object-cover"
             loading="eager"

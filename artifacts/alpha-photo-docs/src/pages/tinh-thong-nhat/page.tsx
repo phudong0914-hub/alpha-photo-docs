@@ -47,7 +47,7 @@ const directorElements = [
     id: 'atmosphere',
     title: 'Atmosphere (Khí quyển)',
     vietnamese: 'Khí quyển cảm xúc',
-    src: '/hero-bau-khong-khi.png',
+    src: '/hero-bau-khong-khi.webp',
     copy: 'Atmosphere là trường năng lượng cảm xúc bao trùm, được tạo ra từ sự hòa hợp tuyệt đối giữa ánh sáng dịu và sắc độ lạnh, mang lại cảm giác tĩnh lặng và u hoài sâu lắng.',
     overlayType: 'atmosphere',
   },
@@ -55,7 +55,7 @@ const directorElements = [
     id: 'structure',
     title: 'Structure (Cấu trúc)',
     vietnamese: 'Bố cục & đường dẫn',
-    src: '/hero-bo-cuc.png',
+    src: '/hero-bo-cuc.webp',
     copy: 'Khung hình được tổ chức chặt chẽ bằng bố cục 1/3 và các đường dẫn chéo mảnh. Sự vững chãi này định hình trật tự đọc ảnh của não bộ.',
     overlayType: 'grid',
   },
@@ -63,7 +63,7 @@ const directorElements = [
     id: 'emotion',
     title: 'Emotion (Màu sắc)',
     vietnamese: 'Sắc thái màu sắc',
-    src: '/hero-mau-sac.png',
+    src: '/hero-mau-sac.webp',
     copy: 'Tông màu chủ đạo là sắc hổ phách (amber) ấm áp tương phản nhẹ với shadow xanh lạnh, tạo ra một trường lực cảm xúc vừa lãng mạn vừa suy tư.',
     overlayType: 'palette',
     palette: ['#0d0d0f', '#d59a54', '#7c8aff', '#f0e6d2', '#1e1b18']
@@ -72,7 +72,7 @@ const directorElements = [
     id: 'eyepath',
     title: 'Eye Path (Phân cấp)',
     vietnamese: 'Điểm nhấn & phân cấp',
-    src: '/hero-phan-cap.png',
+    src: '/hero-phan-cap.webp',
     copy: 'Điểm nhấn thị giác mạnh hướng mắt người xem đi từ các chi tiết tiền cảnh sẫm màu, trượt dọc theo tia sáng và dừng chân tại chủ thể chính ở trung cảnh.',
     overlayType: 'eyepath',
   },
@@ -80,7 +80,7 @@ const directorElements = [
     id: 'space',
     title: 'Space (Dư âm)',
     vietnamese: 'Không gian & dư âm',
-    src: '/hero-khong-gian-extra.png',
+    src: '/hero-khong-gian-extra.webp',
     copy: 'Khoảng trống bao la (negative space) chiếm hơn 60% diện tích ảnh không hề lãng phí, nó hoạt động như nhịp nghỉ thị giác, khuếch đại sự cô đơn của chủ thể.',
     overlayType: 'space',
   }
@@ -94,9 +94,9 @@ const curriculumLevels = [
     english: 'Cognitive Foundation',
     copy: 'Bài 1-3 định hình bản chất của nhiếp ảnh: sức mạnh tâm lý của ảnh, cách xác lập mục đích chụp và vai trò của biểu tượng văn hóa để kể câu chuyện phi ngôn ngữ.',
     chapters: [
-      { num: 'Chương 1', name: 'Sức mạnh hình ảnh', src: '/hero-tab1.png', desc: 'Lý giải tại sao một hình ảnh có thể tác động trực tiếp và lưu dấu trong tâm trí người xem lâu hơn ngôn từ.' },
-      { num: 'Chương 2', name: 'Mục đích nhiếp ảnh', src: '/hero-muc-dich.png', desc: 'Định hình mục tiêu cốt lõi của tác phẩm: ghi nhận, thuyết phục, khơi gợi cảm xúc hay thử nghiệm thị giác.' },
-      { num: 'Chương 3', name: 'Ngôn ngữ biểu tượng', src: '/hero-bieu-tuong.png', desc: 'Giải mã cách lồng ghép các biểu tượng văn hóa, ẩn dụ thị giác để tạo chiều sâu ý nghĩa đa tầng.' }
+      { num: 'Chương 1', name: 'Sức mạnh hình ảnh', src: '/hero-tab1.webp', desc: 'Lý giải tại sao một hình ảnh có thể tác động trực tiếp và lưu dấu trong tâm trí người xem lâu hơn ngôn từ.' },
+      { num: 'Chương 2', name: 'Mục đích nhiếp ảnh', src: '/hero-muc-dich.webp', desc: 'Định hình mục tiêu cốt lõi của tác phẩm: ghi nhận, thuyết phục, khơi gợi cảm xúc hay thử nghiệm thị giác.' },
+      { num: 'Chương 3', name: 'Ngôn ngữ biểu tượng', src: '/hero-bieu-tuong.webp', desc: 'Giải mã cách lồng ghép các biểu tượng văn hóa, ẩn dụ thị giác để tạo chiều sâu ý nghĩa đa tầng.' }
     ]
   },
   {
@@ -105,12 +105,12 @@ const curriculumLevels = [
     english: 'Visual Vocabulary',
     copy: 'Bài 4-9 là bảng chữ cái thị giác cơ bản. Bạn học cách nói bằng các yếu tố hình học sơ khởi: đường nét, hình khối, không gian, ánh sáng, màu sắc và tương phản.',
     chapters: [
-      { num: 'Chương 4', name: 'Đường nét (Line)', src: '/hero-duong-net.png', desc: 'Dẫn dắt mắt người xem di chuyển, tạo cảm giác ổn định, năng động hay căng thẳng thông qua hướng đi.' },
-      { num: 'Chương 5', name: 'Hình dạng (Shape)', src: '/hero-hinh-dang.png', desc: 'Sử dụng hình tròn tạo sự hài hòa, hình vuông tạo sự vững chãi, hình tam giác tạo sự chuyển động lực.' },
-      { num: 'Chương 6', name: 'Không gian (Space)', src: '/hero-khong-gian.png', desc: 'Thiết lập mối quan hệ giữa chủ thể (positive space) và khoảng trống (negative space) để tạo nhịp thở.' },
+      { num: 'Chương 4', name: 'Đường nét (Line)', src: '/hero-duong-net.webp', desc: 'Dẫn dắt mắt người xem di chuyển, tạo cảm giác ổn định, năng động hay căng thẳng thông qua hướng đi.' },
+      { num: 'Chương 5', name: 'Hình dạng (Shape)', src: '/hero-hinh-dang.webp', desc: 'Sử dụng hình tròn tạo sự hài hòa, hình vuông tạo sự vững chãi, hình tam giác tạo sự chuyển động lực.' },
+      { num: 'Chương 6', name: 'Không gian (Space)', src: '/hero-khong-gian.webp', desc: 'Thiết lập mối quan hệ giữa chủ thể (positive space) và khoảng trống (negative space) để tạo nhịp thở.' },
       { num: 'Chương 7', name: 'Ánh sáng (Light)', src: '/anh-sang-hero.png', desc: 'Điêu khắc khối, tạo bóng đổ, độ kịch tính và định hình kết cấu của thế giới vật chất.' },
-      { num: 'Chương 8', name: 'Màu sắc (Color)', src: '/hero-mau-sac.png', desc: 'Ứng dụng bánh xe màu sắc và sự tương tác giữa các tông màu để khơi gợi trạng thái tâm lý lập tức.' },
-      { num: 'Chương 9', name: 'Tương phản (Contrast)', src: '/hero-tuong-phan.png', desc: 'Tạo ra lực kéo thị giác mạnh mẽ thông qua tương phản sáng tối, nóng lạnh hoặc kích thước.' }
+      { num: 'Chương 8', name: 'Màu sắc (Color)', src: '/hero-mau-sac.webp', desc: 'Ứng dụng bánh xe màu sắc và sự tương tác giữa các tông màu để khơi gợi trạng thái tâm lý lập tức.' },
+      { num: 'Chương 9', name: 'Tương phản (Contrast)', src: '/hero-tuong-phan.webp', desc: 'Tạo ra lực kéo thị giác mạnh mẽ thông qua tương phản sáng tối, nóng lạnh hoặc kích thước.' }
     ]
   },
   {
@@ -119,9 +119,9 @@ const curriculumLevels = [
     english: 'Tactile & Atmosphere',
     copy: 'Bài 10-12 chuyển hóa từ việc nhìn sang việc chạm và cảm nhận. Bạn thiết lập chất liệu bề mặt ảnh, cảm giác tỷ lệ và bầu không khí bao trùm không gian.',
     chapters: [
-      { num: 'Chương 10', name: 'Chất liệu (Texture)', src: '/hero-chat-lieu.png', desc: 'Đánh thức xúc giác của người xem qua cách thể hiện độ mịn màng, thô ráp hay gai góc của bề mặt.' },
-      { num: 'Chương 11', name: 'Tỷ lệ & Kích thước', src: '/hero-kich-thuoc-ty-le.png', desc: 'So sánh kích thước các vật thể để nhấn mạnh sự vĩ đại của thiên nhiên hay sự bé nhỏ của con người.' },
-      { num: 'Chương 12', name: 'Bầu không khí', src: '/hero-bau-khong-khi.png', desc: 'Tổng hòa sương mù, khói, độ ẩm và thời tiết để tạo ra một môi trường cảm xúc đậm đặc.' }
+      { num: 'Chương 10', name: 'Chất liệu (Texture)', src: '/hero-chat-lieu.webp', desc: 'Đánh thức xúc giác của người xem qua cách thể hiện độ mịn màng, thô ráp hay gai góc của bề mặt.' },
+      { num: 'Chương 11', name: 'Tỷ lệ & Kích thước', src: '/hero-kich-thuoc-ty-le.webp', desc: 'So sánh kích thước các vật thể để nhấn mạnh sự vĩ đại của thiên nhiên hay sự bé nhỏ của con người.' },
+      { num: 'Chương 12', name: 'Bầu không khí', src: '/hero-bau-khong-khi.webp', desc: 'Tổng hòa sương mù, khói, độ ẩm và thời tiết để tạo ra một môi trường cảm xúc đậm đặc.' }
     ]
   },
   {
@@ -130,9 +130,9 @@ const curriculumLevels = [
     english: 'Story Structure',
     copy: 'Bài 13-15 là các quyết định mang tính đạo diễn. Bạn sắp đặt trật tự bằng bố cục, điều khiển góc chụp để định vị tâm lý người xem, và dùng tiêu điểm để phân lọc thông tin.',
     chapters: [
-      { num: 'Chương 13', name: 'Bố cục (Composition)', src: '/hero-bo-cuc.png', desc: 'Sắp xếp trật tự các vật thể trong khung để tạo ra sự mạch lạc và dẫn dắt người xem đọc ảnh tự nhiên.' },
-      { num: 'Chương 14', name: 'Góc chụp (Camera Angle)', src: '/hero-goc-chup.png', desc: 'Thay đổi góc cao, góc thấp hay ngang mắt để thiết lập mối quan hệ quyền lực, sự đồng cảm hay xa cách.' },
-      { num: 'Chương 15', name: 'Tiêu điểm & Độ sâu', src: '/hero-tieu-diem.png', desc: 'Điều phối độ nông sâu trường ảnh để cô lập chủ thể, dọn dẹp hậu cảnh nhiễu và định hướng sự tập trung.' }
+      { num: 'Chương 13', name: 'Bố cục (Composition)', src: '/hero-bo-cuc.webp', desc: 'Sắp xếp trật tự các vật thể trong khung để tạo ra sự mạch lạc và dẫn dắt người xem đọc ảnh tự nhiên.' },
+      { num: 'Chương 14', name: 'Góc chụp (Camera Angle)', src: '/hero-goc-chup.webp', desc: 'Thay đổi góc cao, góc thấp hay ngang mắt để thiết lập mối quan hệ quyền lực, sự đồng cảm hay xa cách.' },
+      { num: 'Chương 15', name: 'Tiêu điểm & Độ sâu', src: '/hero-tieu-diem.webp', desc: 'Điều phối độ nông sâu trường ảnh để cô lập chủ thể, dọn dẹp hậu cảnh nhiễu và định hướng sự tập trung.' }
     ]
   },
   {
@@ -141,9 +141,9 @@ const curriculumLevels = [
     english: 'Operational System',
     copy: 'Bài 16-18 là chất keo kết dính. Nhịp điệu tạo ra chuyển động thời gian, cân bằng giữ vững sự ổn định lực, và phân cấp sắp xếp thứ tự ưu tiên của mọi yếu tố.',
     chapters: [
-      { num: 'Chương 16', name: 'Nhịp điệu (Rhythm)', src: '/hero-nhip-dieu.png', desc: 'Lặp đi lặp lại các yếu tố thị giác có chu kỳ để tạo nên một giai điệu hình ảnh sống động.' },
-      { num: 'Chương 17', name: 'Cân bằng (Balance)', src: '/hero-can-bang.png', desc: 'Phân bổ trọng lượng thị giác để tạo ra sự cân bằng đối xứng (tĩnh) hoặc cân bằng bất đối xứng (động).' },
-      { num: 'Chương 18', name: 'Phân cấp (Hierarchy)', src: '/hero-phan-cap.png', desc: 'Thiết lập rõ nét yếu tố chính, phụ và phụ trợ để dẫn dắt tuyến đọc ảnh mạch lạc từ trước ra sau.' }
+      { num: 'Chương 16', name: 'Nhịp điệu (Rhythm)', src: '/hero-nhip-dieu.webp', desc: 'Lặp đi lặp lại các yếu tố thị giác có chu kỳ để tạo nên một giai điệu hình ảnh sống động.' },
+      { num: 'Chương 17', name: 'Cân bằng (Balance)', src: '/hero-can-bang.webp', desc: 'Phân bổ trọng lượng thị giác để tạo ra sự cân bằng đối xứng (tĩnh) hoặc cân bằng bất đối xứng (động).' },
+      { num: 'Chương 18', name: 'Phân cấp (Hierarchy)', src: '/hero-phan-cap.webp', desc: 'Thiết lập rõ nét yếu tố chính, phụ và phụ trợ để dẫn dắt tuyến đọc ảnh mạch lạc từ trước ra sau.' }
     ]
   }
 ];
@@ -258,7 +258,7 @@ export default function TinhThongNhatPage() {
           {/* Subtle background image */}
           <div className="absolute inset-0 z-0 opacity-40 filter grayscale contrast-125 saturate-50 pointer-events-none">
             <img
-              src="/hero-khong-gian.png"
+              src="/hero-khong-gian.webp"
               alt="Background"
               className="w-full h-full object-cover object-center"
             />
@@ -307,7 +307,7 @@ export default function TinhThongNhatPage() {
               <div className="relative w-full max-w-[420px] aspect-[4/5] p-3 rounded-2xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-xl shadow-2xl">
                 <div className="relative w-full h-full rounded-xl overflow-hidden group">
                   <img
-                    src="/hero-bau-khong-khi.png"
+                    src="/hero-bau-khong-khi.webp"
                     alt="Atmosphere visual example"
                     className="w-full h-full object-cover filter saturate-75 contrast-110 brightness-95 group-hover:scale-105 transition-transform duration-[1200ms]"
                   />
@@ -328,13 +328,13 @@ export default function TinhThongNhatPage() {
 
                 {/* Overlap offset frames */}
                 <div className="absolute -bottom-6 -left-6 w-32 aspect-square rounded-lg border border-white/10 overflow-hidden shadow-xl hidden md:block">
-                  <img src="/hero-bo-cuc.png" alt="Structure" className="w-full h-full object-cover" />
+                  <img src="/hero-bo-cuc.webp" alt="Structure" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-black/30 pointer-events-none" />
                   <div className="absolute bottom-1 left-1.5 text-[8px] font-mono text-white/70 pointer-events-none">02. STRUCTURE</div>
                 </div>
 
                 <div className="absolute -top-6 -right-6 w-28 aspect-square rounded-lg border border-white/10 overflow-hidden shadow-xl hidden md:block">
-                  <img src="/hero-phan-cap.png" alt="Focal Point" className="w-full h-full object-cover" />
+                  <img src="/hero-phan-cap.webp" alt="Focal Point" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-black/30 pointer-events-none" />
                   <div className="absolute bottom-1 left-1.5 text-[8px] font-mono text-white/70 pointer-events-none">03. FOCUS PATH</div>
                 </div>

@@ -119,7 +119,7 @@ export default function MucDichPage() {
         {/* Hero image */}
         <div className="rounded-xl overflow-hidden border border-[#1e1e2a] mb-8">
           <img
-            src="/hero-muc-dich.png"
+            src="/hero-muc-dich.webp"
             alt="Mục đích của hình ảnh - Ảnh minh họa"
             className="w-full h-auto object-cover"
             loading="eager"

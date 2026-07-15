@@ -114,7 +114,7 @@ export default function HinhDangPage() {
         {/* Hero image */}
         <div className="rounded-xl overflow-hidden border border-[#1e1e2a] mb-8">
           <img
-            src="/hero-hinh-dang.png"
+            src="/hero-hinh-dang.webp"
             alt="Hình dạng hình khối - Ảnh minh họa"
             className="w-full h-auto object-cover"
             loading="eager"

@@ -117,7 +117,7 @@ export default function KhongGianPage() {
         {/* Hero image */}
         <div className="rounded-xl overflow-hidden border border-[#1e1e2a] mb-8">
           <img
-            src="/hero-khong-gian.png"
+            src="/hero-khong-gian.webp"
             alt="Không gian âm dương - Ảnh minh họa"
             className="w-full h-auto object-cover"
             loading="eager"

@@ -125,7 +125,7 @@ export default function KichThuocPage() {
         {/* Hero image */}
         <div className="color-overview-hero rounded-xl overflow-hidden border border-[#1e1e2a] mb-8">
           <img
-            src="/hero-kich-thuoc-ty-le.png"
+            src="/hero-kich-thuoc-ty-le.webp"
             alt="Infographic tổng quan về kích thước và tỷ lệ trong nhiếp ảnh: tỷ lệ vàng, Fibonacci, rule of thirds, tỷ lệ khung hình và ứng dụng sáng tác"
             className="w-full h-auto object-contain"
             loading="eager"

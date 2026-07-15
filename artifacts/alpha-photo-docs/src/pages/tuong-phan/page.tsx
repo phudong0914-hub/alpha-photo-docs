@@ -123,7 +123,7 @@ export default function TuongPhanPage() {
         {/* Hero image */}
         <div className="color-overview-hero rounded-xl overflow-hidden border border-[#1e1e2a] mb-8">
           <img
-            src="/hero-tuong-phan.png"
+            src="/hero-tuong-phan.webp"
             alt="Infographic tổng quan về tương phản màu sắc trong nhiếp ảnh: 7 loại tương phản của Itten, bổ sắc, đồng thời và ứng dụng"
             className="w-full h-auto object-contain"
             loading="eager"

@@ -127,7 +127,7 @@ export default function BoCucPage() {
         {/* Hero image */}
         <div className="color-overview-hero rounded-xl overflow-hidden border border-[#1e1e2a] mb-8">
           <img
-            src="/hero-bo-cuc.png"
+            src="/hero-bo-cuc.webp"
             alt="Infographic tổng quan về bố cục trong nhiếp ảnh: rule of thirds, golden ratio, leading lines, negative space và nguyên tắc cốt lõi"
             className="w-full h-auto object-contain"
             loading="eager"

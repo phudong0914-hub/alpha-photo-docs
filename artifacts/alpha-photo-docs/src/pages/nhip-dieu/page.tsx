@@ -128,7 +128,7 @@ export default function NhipDieuPage() {
         {/* Hero image */}
         <div className="color-overview-hero rounded-xl overflow-hidden border border-[#1e1e2a] mb-8">
           <img
-            src="/hero-nhip-dieu.png"
+            src="/hero-nhip-dieu.webp"
             alt="Infographic tổng quan về nhịp điệu thị giác trong nhiếp ảnh: repetition, spacing, direction, variation, các loại nhịp điệu và ngắt nhịp"
             className="w-full h-auto object-contain"
             loading="eager"

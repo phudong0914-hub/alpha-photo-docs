@@ -128,7 +128,7 @@ export default function CanBangPage() {
         {/* Hero image */}
         <div className="color-overview-hero rounded-xl overflow-hidden border border-[#1e1e2a] mb-8">
           <img
-            src="/hero-can-bang.png"
+            src="/hero-can-bang.webp"
             alt="Infographic tổng quan về cân bằng tĩnh và động trong nhiếp ảnh: trọng lượng thị giác, cân bằng tĩnh, cân bằng động và cách kiểm tra cân bằng"
             className="w-full h-auto object-contain"
             loading="eager"

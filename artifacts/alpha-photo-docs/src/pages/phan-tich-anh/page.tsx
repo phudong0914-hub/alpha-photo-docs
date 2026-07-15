@@ -144,7 +144,7 @@ const demoImages = [
 export default function PhantichAnhPage() {
   const [imageSrc, setImageSrc] = useState<string | null>(null);
   const [selectedDemoId, setSelectedDemoId] = useState<string | null>(null);
-  const [apiKey, setApiKey] = useState('AIzaSyAcyWnzMrXZSD9XrJAbCUOAl2Ikklovcl8');
+  const [apiKey, setApiKey] = useState(import.meta.env.VITE_GEMINI_API_KEY || '');
   const [showApiKey, setShowApiKey] = useState(false);
   const [pins, setPins] = useState<DiagnosticPin[]>([]);
   const [activePinId, setActivePinId] = useState<string | null>(null);
@@ -232,8 +232,8 @@ export default function PhantichAnhPage() {
     const savedKey = localStorage.getItem('alpha-gemini-key');
     if (savedKey) {
       setApiKey(savedKey);
-    } else {
-      localStorage.setItem('alpha-gemini-key', 'AIzaSyAcyWnzMrXZSD9XrJAbCUOAl2Ikklovcl8');
+    } else if (import.meta.env.VITE_GEMINI_API_KEY) {
+      setApiKey(import.meta.env.VITE_GEMINI_API_KEY);
     }
 
     // Load critique history from localstorage
